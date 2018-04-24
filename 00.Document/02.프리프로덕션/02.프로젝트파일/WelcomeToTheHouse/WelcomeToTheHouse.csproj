@@ -289,6 +289,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\02.Scripts\ButtonFunc.cs" />
+    <Compile Include="Assets\02.Scripts\GameManager.cs" />
+    <Compile Include="Assets\02.Scripts\Logo.cs" />
+    <Compile Include="Assets\02.Scripts\Player.cs" />
     <Compile Include="Assets\04.Resources\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
     <Compile Include="Assets\04.Resources\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
     <Compile Include="Assets\04.Resources\GoogleVR\Demos\Scripts\HelloVR\HeadsetDemoManager.cs" />
