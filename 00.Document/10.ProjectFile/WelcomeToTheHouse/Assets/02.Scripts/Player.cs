@@ -46,22 +46,17 @@ public class Player : MonoBehaviour
                 //바라본대상이 버튼일 때
                 if (hitcoll.collider.CompareTag("Button"))
                 {
-                    hitcoll.collider.GetComponent<ButtonFunc>().TitleBtnOn();
-                   
+                    hitcoll.collider.GetComponent<ButtonFunc>().SetTurnOn(true);
+
                 }
                 //바라본 대상이 웨이 포인트일때
                 if (hitcoll.collider.CompareTag("WayPoint"))
                 {
                     float step = movespeed * Time.deltaTime;
 
-                    //#1
+                    
                     transform.position = Vector3.MoveTowards(transform.position, hitcoll.transform.localPosition, step);
-
-                    //#2
-                    //float y = transform.position.y;
-                    //transform.Translate(hitcoll.transform.localPosition.x, y, hitcoll.transform.localPosition.z);
-
-                
+                                    
                 }
                 //item 일때
                 //if (hitcoll.collider.CompareTag("Item"))

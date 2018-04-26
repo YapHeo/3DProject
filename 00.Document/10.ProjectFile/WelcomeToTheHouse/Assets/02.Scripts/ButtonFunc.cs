@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 public class ButtonFunc : MonoBehaviour
 {
-    GameObject Gm;
-    GameManager gm;
+    bool turnON = false;
 
     void Start()
     {
-        Gm = GameObject.Find("GameManager");
-        gm = Gm.GetComponent<GameManager>();
+        
     }
    
     void Update()
@@ -17,11 +14,15 @@ public class ButtonFunc : MonoBehaviour
 
     }
 
-    public void TitleBtnOn()
+    public bool GetTurnOn()
     {
-        SceneManager.LoadScene("Stage1");
+        return turnON;
     }
 
+    public void SetTurnOn(bool ans)
+    {
+        turnON = ans;
+    }
 
 
 }
