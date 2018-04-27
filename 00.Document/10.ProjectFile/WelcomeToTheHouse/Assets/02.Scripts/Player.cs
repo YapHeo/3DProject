@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     public Image Cursorgage;
 
     // 인벤 정보
-    public GameObject inventory;
+    //public GameObject inventory;
     GameObject inven;
 
     Vector3 Cameracenter;
@@ -25,7 +25,12 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        
         Cameracenter = new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
+        inven = GameObject.Find("Inventory");
+        //inven = Instantiate(inventory) as GameObject;
+        //inven.transform.position = new Vector3(0, 0, 0);
+        inven.SetActive(false);
     }
 
 
@@ -62,10 +67,11 @@ public class Player : MonoBehaviour
 
                 }
                 //item 일때
-                //if (hitcoll.collider.CompareTag("Item"))
-                //{
-
-                //}
+                if (hitcoll.collider.CompareTag("Item"))
+                {
+                    inven.GetComponent<Inventory>().AddItem(0);
+                    Destroy(hitcoll.collider.gameObject);
+                }
                 //
                 //if (hitcoll.collider.CompareTag("FakeItem"))
                 //{
@@ -82,14 +88,10 @@ public class Player : MonoBehaviour
         // 임시 키사용
         if (Input.GetKeyDown(KeyCode.I))
         {
-            inven = Instantiate(inventory) as GameObject;
-
-            inven.transform.position = new Vector3(0, 0, 0);
+            if (inven.activeSelf == false)
+                inven.SetActive(true);
+            else
+                inven.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            Destroy(inven);
-        }
-
     }
 }
