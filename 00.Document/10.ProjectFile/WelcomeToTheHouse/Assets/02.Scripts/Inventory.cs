@@ -39,7 +39,7 @@ public class Inventory : MonoBehaviour
         //AddItem();
 
         // 아이템 삭제
-        //DelItem();
+        DelItem();
 
         //if (Input.GetKeyDown(KeyCode.Alpha0))
            // ResetItem();

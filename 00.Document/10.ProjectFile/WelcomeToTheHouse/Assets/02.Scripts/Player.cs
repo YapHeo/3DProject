@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     public Image Cursorgage;
 
     // 인벤 정보
-    //public GameObject inventory;
+    public GameObject inventory;
     GameObject inven;
 
     Vector3 Cameracenter;
@@ -25,12 +26,13 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        
         Cameracenter = new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
-        inven = GameObject.Find("Inventory");
-        //inven = Instantiate(inventory) as GameObject;
-        //inven.transform.position = new Vector3(0, 0, 0);
-        inven.SetActive(false);
+
+        if(SceneManager.GetActiveScene().name == "Stage1")
+        {
+            inven = Instantiate(inventory) as GameObject;
+            inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
+        }
     }
 
 
@@ -69,7 +71,10 @@ public class Player : MonoBehaviour
                 //item 일때
                 if (hitcoll.collider.CompareTag("Item"))
                 {
+                    // AddItem(hitcoll.collider.gameObject.getid() 형태로 변경
                     inven.GetComponent<Inventory>().AddItem(0);
+                    // 인벤 위치 수정 필요 플레이어와 아이템 거리를 사용한 코드로 변경이 필요
+                    inven.transform.position = new Vector3(hitcoll.collider.gameObject.transform.position.x, hitcoll.collider.gameObject.transform.position.y+2, hitcoll.collider.gameObject.transform.position.z);
                     Destroy(hitcoll.collider.gameObject);
                 }
                 //
@@ -83,15 +88,6 @@ public class Player : MonoBehaviour
         else
         {
             gageAmount = 0;
-        }
-
-        // 임시 키사용
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            if (inven.activeSelf == false)
-                inven.SetActive(true);
-            else
-                inven.SetActive(false);
         }
     }
 }
