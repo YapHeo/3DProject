@@ -5,6 +5,9 @@ public class Player : MonoBehaviour
 {
     public Image Cursorgage;
 
+    // 인벤 정보
+    public GameObject inventory;
+    GameObject inven;
 
     Vector3 Cameracenter;
     float gageAmount;
@@ -36,7 +39,7 @@ public class Player : MonoBehaviour
         RaycastHit hitcoll;
 
         //layermark를 사용------------ 
-        if (Physics.Raycast(ray,out hitcoll, rayLong, 1<<8))
+        if (Physics.Raycast(ray, out hitcoll, rayLong, 1 << 8))
         {
             gageAmount += gageTime * Time.deltaTime;
 
@@ -54,9 +57,9 @@ public class Player : MonoBehaviour
                 {
                     float step = movespeed * Time.deltaTime;
 
-                    
+
                     transform.position = Vector3.MoveTowards(transform.position, hitcoll.transform.localPosition, step);
-                                    
+
                 }
                 //item 일때
                 //if (hitcoll.collider.CompareTag("Item"))
@@ -74,6 +77,18 @@ public class Player : MonoBehaviour
         else
         {
             gageAmount = 0;
+        }
+
+        // 임시 키사용
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            inven = Instantiate(inventory) as GameObject;
+
+            inven.transform.position = new Vector3(0, 0, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            Destroy(inven);
         }
 
     }
