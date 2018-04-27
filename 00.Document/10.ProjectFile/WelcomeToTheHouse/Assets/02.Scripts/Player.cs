@@ -75,7 +75,20 @@ public class Player : MonoBehaviour
                     inven.GetComponent<Inventory>().AddItem(0);
 
                     // 인벤 위치 수정 필요 플레이어와 아이템 거리를 사용한 코드로 변경이 필요
-                    inven.transform.position = new Vector3(hitcoll.collider.gameObject.transform.position.x, hitcoll.collider.gameObject.transform.position.y+2, hitcoll.collider.gameObject.transform.position.z);
+                    inven.transform.position = new Vector3(hitcoll.collider.gameObject.transform.position.x, hitcoll.collider.gameObject.transform.position.y, hitcoll.collider.gameObject.transform.position.z);
+                    //if (hitcoll.collider.transform.position.z < 0)
+                    //{
+
+                    //}
+                    //else if (hitcoll.collider.transform.position.z > 0)
+                    //{
+
+                    //}
+                    //else
+                    //{
+
+                    //}
+                    //inven.transform.position = new Vector3(transform.position.x,transform.position.y,);
                     Destroy(hitcoll.collider.gameObject);
                 }
                 if (hitcoll.collider.CompareTag("InvenClose"))
