@@ -6,8 +6,6 @@ public class TestCube : Item
 {
     void Start()
     {
-        type = 2;
-        spriteId = 1;
     }
 
     void Update()
