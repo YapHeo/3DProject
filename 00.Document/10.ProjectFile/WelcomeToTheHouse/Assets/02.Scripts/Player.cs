@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -26,6 +27,12 @@ public class Player : MonoBehaviour
     void Start()
     {
         Cameracenter = new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
+
+        if(SceneManager.GetActiveScene().name == "Stage1")
+        {
+            inven = Instantiate(inventory) as GameObject;
+            inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
+        }
     }
 
 
@@ -62,10 +69,32 @@ public class Player : MonoBehaviour
 
                 }
                 //item 일때
-                //if (hitcoll.collider.CompareTag("Item"))
-                //{
+                if (hitcoll.collider.CompareTag("Item"))
+                {
+                    // AddItem(hitcoll.collider.gameObject.getid() 형태로 변경
+                    inven.GetComponent<Inventory>().AddItem(0);
 
-                //}
+                    // 인벤 위치 수정 필요 플레이어와 아이템 거리를 사용한 코드로 변경이 필요
+                    inven.transform.position = new Vector3(hitcoll.collider.gameObject.transform.position.x, hitcoll.collider.gameObject.transform.position.y, hitcoll.collider.gameObject.transform.position.z);
+                    //if (hitcoll.collider.transform.position.z < 0)
+                    //{
+
+                    //}
+                    //else if (hitcoll.collider.transform.position.z > 0)
+                    //{
+
+                    //}
+                    //else
+                    //{
+
+                    //}
+                    //inven.transform.position = new Vector3(transform.position.x,transform.position.y,);
+                    Destroy(hitcoll.collider.gameObject);
+                }
+                if (hitcoll.collider.CompareTag("InvenClose"))
+                {
+                    inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
+                }
                 //
                 //if (hitcoll.collider.CompareTag("FakeItem"))
                 //{
@@ -78,18 +107,5 @@ public class Player : MonoBehaviour
         {
             gageAmount = 0;
         }
-
-        // 임시 키사용
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            inven = Instantiate(inventory) as GameObject;
-
-            inven.transform.position = new Vector3(0, 0, 0);
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            Destroy(inven);
-        }
-
     }
 }

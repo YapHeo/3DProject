@@ -7,6 +7,7 @@ TagManager:
   - Button
   - WayPoint
   - Item
+  - InvenClose
   layers:
   - Default
   - TransparentFX

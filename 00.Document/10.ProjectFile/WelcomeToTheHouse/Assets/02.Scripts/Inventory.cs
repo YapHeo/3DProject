@@ -36,56 +36,65 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         // 아이템 추가
-        AddItem();
+        //AddItem();
 
         // 아이템 삭제
         DelItem();
 
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-            ResetItem();
+        //if (Input.GetKeyDown(KeyCode.Alpha0))
+           // ResetItem();
     }
 
-    public void AddItem()
+    public void AddItem(int _itemID)
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        for (int i = 0; i < 8; ++i)
         {
-            for (int i = 0; i < 8; ++i)
+            if (arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite == null)
             {
-                if (arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite == null)
-                {
-                    arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite = itemSprite[0];
+                arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite = itemSprite[_itemID];
 
-                    return;
-                }
+                return;
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            for (int i = 0; i < 8; ++i)
-            {
-                if (arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite == null)
-                {
-                    arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite = itemSprite[1];
+        //if(Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    for (int i = 0; i < 8; ++i)
+        //    {
+        //        if (arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite == null)
+        //        {
+        //            arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite = itemSprite[0];
 
-                    return;
-                }
-            }
-        }
+        //            return;
+        //        }
+        //    }
+        //}
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            for (int i = 0; i < 8; ++i)
-            {
-                if (arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite == null)
-                {
-                    arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite = itemSprite[2];
+        //if (Input.GetKeyDown(KeyCode.W))
+        //{
+        //    for (int i = 0; i < 8; ++i)
+        //    {
+        //        if (arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite == null)
+        //        {
+        //            arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite = itemSprite[1];
 
-                    return;
-                }
-            }
-        }
+        //            return;
+        //        }
+        //    }
+        //}
 
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    for (int i = 0; i < 8; ++i)
+        //    {
+        //        if (arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite == null)
+        //        {
+        //            arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite = itemSprite[2];
+
+        //            return;
+        //        }
+        //    }
+        //}
     }
 
     public void DelItem()
