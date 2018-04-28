@@ -9,12 +9,13 @@ public class BillBoard : MonoBehaviour
 
     void Start()
     {
-        camTr = Camera.main.transform;
+        camTr = Camera.main.transform; 
     }
 
 
     void Update()
     {
         transform.LookAt(camTr);
+
     }
 }
