@@ -267,7 +267,11 @@
       <HintPath>Assets/04.Resources/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
+<<<<<<< HEAD
       <HintPath>C:/Users/wju02/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
+=======
+      <HintPath>C:/Users/JY/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
+>>>>>>> 8d13964550d57fcf167326003c25a5d2249b6af9
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/wju02/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -285,7 +289,11 @@
       <HintPath>C:/Users/wju02/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
+<<<<<<< HEAD
       <HintPath>C:/Users/wju02/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+=======
+      <HintPath>C:/Users/JY/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+>>>>>>> 8d13964550d57fcf167326003c25a5d2249b6af9
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -293,11 +301,15 @@
     <Compile Include="Assets\02.Scripts\ButtonFunc.cs" />
     <Compile Include="Assets\02.Scripts\GameManager.cs" />
     <Compile Include="Assets\02.Scripts\Inventory.cs" />
+    <Compile Include="Assets\02.Scripts\Item.cs" />
     <Compile Include="Assets\02.Scripts\ItemDatabase.cs" />
+    <Compile Include="Assets\02.Scripts\Key.cs" />
     <Compile Include="Assets\02.Scripts\Logo.cs" />
     <Compile Include="Assets\02.Scripts\Player.cs" />
     <Compile Include="Assets\02.Scripts\QuitBtn.cs" />
+    <Compile Include="Assets\02.Scripts\SimpleKeyAndLock.cs" />
     <Compile Include="Assets\02.Scripts\StartBtn.cs" />
+    <Compile Include="Assets\02.Scripts\TestCube.cs" />
     <Compile Include="Assets\04.Resources\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
     <Compile Include="Assets\04.Resources\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
     <Compile Include="Assets\04.Resources\GoogleVR\Demos\Scripts\HelloVR\HeadsetDemoManager.cs" />

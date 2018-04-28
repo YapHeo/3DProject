@@ -76,29 +76,20 @@ public class Player : MonoBehaviour
                     transform.position = Vector3.MoveTowards(transform.position, hitcoll.transform.localPosition, step);
 
                 }
+
                 //item 일때
                 if (hitcoll.collider.CompareTag("Item"))
                 {
-                    // AddItem(hitcoll.collider.gameObject.getid() 형태로 변경
-                    inven.GetComponent<Inventory>().AddItem(0);
-
                     // 인벤 위치 수정 필요 플레이어와 아이템 거리를 사용한 코드로 변경이 필요
                     inven.transform.position = new Vector3(hitcoll.collider.gameObject.transform.position.x, hitcoll.collider.gameObject.transform.position.y, hitcoll.collider.gameObject.transform.position.z);
-                    //if (hitcoll.collider.transform.position.z < 0)
-                    //{
+                }
 
-                    //}
-                    //else if (hitcoll.collider.transform.position.z > 0)
-                    //{
-
-                    //}
-                    //else
-                    //{
-
-                    //}
-                    //inven.transform.position = new Vector3(transform.position.x,transform.position.y,);
+                if(hitcoll.collider.CompareTag("InvenItem"))
+                {
+                    inven.GetComponent<Inventory>().AddItem(hitcoll.collider.GetComponent<Item>().GetSpriteId());
                     Destroy(hitcoll.collider.gameObject);
                 }
+
                 if (hitcoll.collider.CompareTag("InvenClose"))
                 {
                     inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
