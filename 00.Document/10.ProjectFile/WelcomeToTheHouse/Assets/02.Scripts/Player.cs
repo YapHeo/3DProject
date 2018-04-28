@@ -4,7 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public Image Cursorgage;
+    [SerializeField]
+    Image Cursorgage;
+
+    [SerializeField]
+    Image idleLook;
+
+    [SerializeField]
+    Image Cursor;
 
     // 인벤 정보
     public GameObject inventory;
@@ -49,7 +56,8 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(ray, out hitcoll, rayLong, 1 << 8))
         {
             gageAmount += gageTime * Time.deltaTime;
-
+            Cursor.gameObject.SetActive(true);
+            idleLook.gameObject.SetActive(false);
 
             if (gageAmount >= 1)
             {
@@ -106,6 +114,8 @@ public class Player : MonoBehaviour
         else
         {
             gageAmount = 0;
+            Cursor.gameObject.SetActive(false);
+            idleLook.gameObject.SetActive(true);
         }
     }
 }
