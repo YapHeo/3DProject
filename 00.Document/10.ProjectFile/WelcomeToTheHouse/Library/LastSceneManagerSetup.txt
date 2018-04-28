@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: C:/Users/wju02/OneDrive/Desktop/Unity_project/AssetProject/Assets/01.Scenes/Stage1.unity
+=======
 - path: Assets/01.Scenes/Stage1.unity
+>>>>>>> 8d13964550d57fcf167326003c25a5d2249b6af9
   isLoaded: 1
   isActive: 1
