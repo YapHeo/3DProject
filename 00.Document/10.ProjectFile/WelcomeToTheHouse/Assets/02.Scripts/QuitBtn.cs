@@ -11,7 +11,8 @@ public class QuitBtn : ButtonFunc
         if (sw == true)
         {
             sw = false;
-            Application.Quit();
+            //Application.Quit();
+            SceneManager.LoadScene(4);
         }
     }
 }

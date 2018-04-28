@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/01.Scenes/Temp.unity
+- path: C:/Users/wju02/OneDrive/Desktop/Unity_project/AssetProject/Assets/01.Scenes/Stage1.unity
   isLoaded: 1
   isActive: 1
