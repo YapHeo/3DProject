@@ -14,7 +14,6 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
-    <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
@@ -259,7 +258,13 @@
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
 >>>>>>> 8d13964550d57fcf167326003c25a5d2249b6af9
+=======
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
+>>>>>>> ac2cac56c9ed6eb8c26cee9f3894ab273a12e333
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
@@ -270,6 +275,7 @@
       <HintPath>Assets/04.Resources/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <HintPath>C:/Users/pizza/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
@@ -292,11 +298,17 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/pizza/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
 =======
+=======
+      <HintPath>C:/Users/SAMSUNG/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
+=======
+<<<<<<< HEAD
+>>>>>>> ac2cac56c9ed6eb8c26cee9f3894ab273a12e333
       <HintPath>C:/Users/wju02/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
 >>>>>>> dce69d66b161e04e1c3b40807fca296980654efb
 =======
       <HintPath>C:/Users/JY/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
 >>>>>>> 8d13964550d57fcf167326003c25a5d2249b6af9
+>>>>>>> dce69d66b161e04e1c3b40807fca296980654efb
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/wju02/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -315,10 +327,20 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
 <<<<<<< HEAD
+      <HintPath>C:/Users/SAMSUNG/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+=======
+<<<<<<< HEAD
       <HintPath>C:/Users/wju02/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
 =======
       <HintPath>C:/Users/JY/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
 >>>>>>> 8d13964550d57fcf167326003c25a5d2249b6af9
+>>>>>>> dce69d66b161e04e1c3b40807fca296980654efb
     </Reference>
   </ItemGroup>
   <ItemGroup>
