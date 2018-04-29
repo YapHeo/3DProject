@@ -401,9 +401,9 @@ GameObject:
   - component: {fileID: 1131707161}
   - component: {fileID: 1131707160}
   - component: {fileID: 1131707159}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -569,9 +569,9 @@ GameObject:
   - component: {fileID: 1484969537}
   - component: {fileID: 1484969536}
   - component: {fileID: 1484969535}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: WayPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

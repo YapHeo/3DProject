@@ -28,8 +28,10 @@ public class Player : MonoBehaviour
     //게이지 차는 속도
     float gageTime = 0.75f;
 
+    //이동목적지설정 초기값
+    Vector3 targetPos = Vector3.up;
     //이동속도
-    float movespeed = 5.0f;
+    float movespeed = 0.2f;
 
     void Start()
     {
@@ -52,6 +54,10 @@ public class Player : MonoBehaviour
 
         RaycastHit hitcoll;
 
+        //이동에 대한 정보------
+        float step = movespeed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
+
         //layermark를 사용------------ 
         if (Physics.Raycast(ray, out hitcoll, rayLong, 1 << 8))
         {
@@ -70,11 +76,7 @@ public class Player : MonoBehaviour
                 //바라본 대상이 웨이 포인트일때
                 if (hitcoll.collider.CompareTag("WayPoint"))
                 {
-                    float step = movespeed * Time.deltaTime;
-
-
-                    transform.position = Vector3.MoveTowards(transform.position, hitcoll.transform.localPosition, step);
-
+                    targetPos = new Vector3(hitcoll.transform.position.x, transform.position.y, hitcoll.transform.position.z);                   
                 }
 
                 //item 일때
