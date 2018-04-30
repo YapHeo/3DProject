@@ -5,6 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     protected int spriteId;
+    protected int InteractionId;
 
     void Start()
     {
