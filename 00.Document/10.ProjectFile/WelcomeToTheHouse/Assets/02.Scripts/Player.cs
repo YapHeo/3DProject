@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     {
         Cameracenter = new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
 
-        if(SceneManager.GetActiveScene().name == "Stage1")
+        if(SceneManager.GetActiveScene().name == "Stage1" || SceneManager.GetActiveScene().name == "TempJH")
         {
             inven = Instantiate(inventory) as GameObject;
             inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
@@ -87,12 +87,14 @@ public class Player : MonoBehaviour
                     inven.transform.position = new Vector3(hitcoll.collider.gameObject.transform.position.x, hitcoll.collider.gameObject.transform.position.y, hitcoll.collider.gameObject.transform.position.z);
                 }
 
+                // 인벤에 들어가는거
                 if(hitcoll.collider.CompareTag("InvenItem"))
                 {
                     inven.GetComponent<Inventory>().AddItem(hitcoll.collider.GetComponent<Item>().GetSpriteId());
                     Destroy(hitcoll.collider.gameObject);
                 }
 
+                // 인벤 닫기
                 if (hitcoll.collider.CompareTag("InvenClose"))
                 {
                     inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
