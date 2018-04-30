@@ -8,6 +8,7 @@ TagManager:
   - WayPoint
   - Item
   - InvenClose
+  - InvenItem
   layers:
   - Default
   - TransparentFX

@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/Stage1.unity
     guid: 5afbe073176b3a742af5ba536b9ccff2
+  - enabled: 1
+    path: Assets/01.Scenes/TempJY.unity
+    guid: 1f27839b17c973f4e8fa58c33f9b43c9
