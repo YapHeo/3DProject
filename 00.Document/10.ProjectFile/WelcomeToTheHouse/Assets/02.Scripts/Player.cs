@@ -91,6 +91,7 @@ public class Player : MonoBehaviour
                 // 상호작용이 필요한 아이템
                 if (hitcoll.collider.CompareTag("InteractionItem"))
                 {
+                    // 이거 개천재(tempId)
                     tempId = hitcoll.collider.GetComponent<Item>().GetSpriteId();
                     Debug.Log("상호상호!!");
                     // 인벤 위치 수정 필요 플레이어와 아이템 거리를 사용한 코드로 변경이 필요
@@ -106,9 +107,11 @@ public class Player : MonoBehaviour
                 // 슬롯과 상호작용
                 if (hitcoll.collider.CompareTag("Slot"))
                 {
-                    if(tempId == hitcoll.collider.GetComponent<Slot>().GetID())
+                    // 이거 개천재(tempId)
+                    if (tempId == hitcoll.collider.GetComponent<Slot>().GetID())
                     {
-                        Destroy(hitcoll.collider.gameObject);
+                        hitcoll.collider.GetComponentInChildren<SpriteRenderer>().sprite = null;
+                        Destroy(GameObject.Find("Cube"));
                     }
                 }
 
