@@ -9,6 +9,8 @@ TagManager:
   - Item
   - InvenClose
   - InvenItem
+  - InteractionItem
+  - Slot
   layers:
   - Default
   - TransparentFX
