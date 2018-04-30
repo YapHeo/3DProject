@@ -24,7 +24,8 @@ public class Player : MonoBehaviour
     Ray ray;
 
     //ray사거리
-    float rayLong = 60.0f;
+    [SerializeField]
+    float rayLong;
     //게이지 차는 속도
     float gageTime = 0.75f;
 
