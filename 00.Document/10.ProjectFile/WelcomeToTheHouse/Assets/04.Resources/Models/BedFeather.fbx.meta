@@ -1,21 +1,16 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: bf4270e4d00286840ae6f985271980b2
-timeCreated: 1525137360
-=======
-guid: f6a451b6e172bd549a7e6f8c37b98782
-timeCreated: 1525137690
->>>>>>> bf3e9878cce936b1b105999f4448d807d9202c55
+guid: 7904567399752fa4f92c9c377308700a
+timeCreated: 1525137689
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Table_Bed
+    2100000: BedFeather
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Table_Bed
+    4300000: BedFeather
   externalObjects: {}
   materials:
     importMaterials: 1
