@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
     Vector3 Cameracenter;
     float gageAmount;
+    int tempId = -1;
 
 
     Ray ray;
@@ -38,7 +39,7 @@ public class Player : MonoBehaviour
     {
         Cameracenter = new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
 
-        if(SceneManager.GetActiveScene().name == "Stage1")
+        if(SceneManager.GetActiveScene().name == "Stage1" || SceneManager.GetActiveScene().name == "TempJH")
         {
             inven = Instantiate(inventory) as GameObject;
             inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
@@ -80,19 +81,33 @@ public class Player : MonoBehaviour
                     targetPos = new Vector3(hitcoll.transform.position.x, transform.position.y, hitcoll.transform.position.z);                   
                 }
 
-                //item 일때
-                if (hitcoll.collider.CompareTag("Item"))
+                // 상호작용이 필요한 아이템
+                if (hitcoll.collider.CompareTag("InteractionItem"))
                 {
+                    // 이거 개천재(tempId)
+                    tempId = hitcoll.collider.GetComponent<Item>().GetSpriteId();
                     // 인벤 위치 수정 필요 플레이어와 아이템 거리를 사용한 코드로 변경이 필요
-                    inven.transform.position = new Vector3(hitcoll.collider.gameObject.transform.position.x, hitcoll.collider.gameObject.transform.position.y, hitcoll.collider.gameObject.transform.position.z);
+                    inven.transform.position = new Vector3((transform.position.x + hitcoll.collider.gameObject.transform.position.x) / 2f, hitcoll.collider.gameObject.transform.position.y + 1.0f, (transform.position.z + hitcoll.collider.gameObject.transform.position.z) / 1.6f);
                 }
-
-                if(hitcoll.collider.CompareTag("InvenItem"))
+                // 인벤에 들어가는거
+                if (hitcoll.collider.CompareTag("InvenItem"))
                 {
                     inven.GetComponent<Inventory>().AddItem(hitcoll.collider.GetComponent<Item>().GetSpriteId());
                     Destroy(hitcoll.collider.gameObject);
                 }
 
+                // 슬롯과 상호작용
+                if (hitcoll.collider.CompareTag("Slot"))
+                {
+                    // 이거 개천재(tempId)
+                    if (tempId == hitcoll.collider.GetComponent<Slot>().GetID())
+                    {
+                        hitcoll.collider.GetComponentInChildren<SpriteRenderer>().sprite = null;
+                        Destroy(GameObject.Find("book"));
+                    }
+                }
+
+                // 인벤 닫기
                 if (hitcoll.collider.CompareTag("InvenClose"))
                 {
                     inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);

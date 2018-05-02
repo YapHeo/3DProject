@@ -52,49 +52,11 @@ public class Inventory : MonoBehaviour
             if (arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite == null)
             {
                 arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite = itemSprite[_itemID];
+                arrSlot[i].GetComponent<Slot>().SetID(_itemID);
 
                 return;
             }
         }
-
-        //if(Input.GetKeyDown(KeyCode.Q))
-        //{
-        //    for (int i = 0; i < 8; ++i)
-        //    {
-        //        if (arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite == null)
-        //        {
-        //            arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite = itemSprite[0];
-
-        //            return;
-        //        }
-        //    }
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.W))
-        //{
-        //    for (int i = 0; i < 8; ++i)
-        //    {
-        //        if (arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite == null)
-        //        {
-        //            arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite = itemSprite[1];
-
-        //            return;
-        //        }
-        //    }
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    for (int i = 0; i < 8; ++i)
-        //    {
-        //        if (arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite == null)
-        //        {
-        //            arrSlot[i].GetComponentInChildren<SpriteRenderer>().sprite = itemSprite[2];
-
-        //            return;
-        //        }
-        //    }
-        //}
     }
 
     public void DelItem()
