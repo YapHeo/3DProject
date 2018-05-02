@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 33383065843202042}
   - component: {fileID: 23546345094047002}
   - component: {fileID: 64263934258181354}
+  - component: {fileID: 95059524521723792}
   m_Layer: 0
   m_Name: Drawer.002
   m_TagString: Untagged
@@ -93,6 +94,7 @@ GameObject:
   - component: {fileID: 33596993558257698}
   - component: {fileID: 23552759920332666}
   - component: {fileID: 64804700971619216}
+  - component: {fileID: 95241552855958542}
   m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
@@ -165,6 +167,7 @@ GameObject:
   - component: {fileID: 33662354013110392}
   - component: {fileID: 23645460232203296}
   - component: {fileID: 64335226102732086}
+  - component: {fileID: 95199227493938624}
   m_Layer: 0
   m_Name: Drawer.001
   m_TagString: Untagged
@@ -348,7 +351,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1174342036318348}
   m_LocalRotation: {x: -0.50000006, y: -0.4999999, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -5.55, y: 0.033045933, z: 0.31025985}
+  m_LocalPosition: {x: -5.0534716, y: -2.9278002, z: 2.633894}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 4480807506730864}
@@ -952,3 +955,54 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300004, guid: 280a46d45eb187649abf6f37ba644fe7, type: 3}
+--- !u!95 &95059524521723792
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187850049624448}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 75d280d161d0942428cba9d75406b587, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95199227493938624
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1752599807623584}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ba9a6b35727155746b373db80c09f57a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95241552855958542
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1412531100540232}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f787bed0c752154cb2c61cf19a382a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
