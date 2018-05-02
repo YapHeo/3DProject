@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 042b47ced4884254ebe894f618af5e0d
-timeCreated: 1525137492
-=======
-guid: 7904567399752fa4f92c9c377308700a
-timeCreated: 1525137689
->>>>>>> 1088270a08082e2cb47b54ada288a7961bba0513
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -16,6 +9,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: BedFeather
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -90,7 +84,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
