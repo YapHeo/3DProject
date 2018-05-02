@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
                     // 이거 개천재(tempId)
                     tempId = hitcoll.collider.GetComponent<Item>().GetSpriteId();
                     // 인벤 위치 수정 필요 플레이어와 아이템 거리를 사용한 코드로 변경이 필요
-                    inven.transform.position = new Vector3((transform.position.x + hitcoll.collider.gameObject.transform.position.x) / 2f, hitcoll.collider.gameObject.transform.position.y + 1.0f, (transform.position.z + hitcoll.collider.gameObject.transform.position.z) / 1.6f);
+                    inven.transform.position = new Vector3((transform.position.x + hitcoll.collider.gameObject.transform.position.x) / 2.0f, hitcoll.collider.gameObject.transform.position.y, (transform.position.z + hitcoll.collider.gameObject.transform.position.z) / 2.0f);
                 }
                 // 인벤에 들어가는거
                 if (hitcoll.collider.CompareTag("InvenItem"))
