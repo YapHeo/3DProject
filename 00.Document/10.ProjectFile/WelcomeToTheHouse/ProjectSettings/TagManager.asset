@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Button
   - WayPoint
-  - Item
   - InvenClose
   - InvenItem
   - InteractionItem
