@@ -15,6 +15,7 @@ ModelImporter:
     100014: OilTank01
     100016: OilTank02
     100018: Torus01
+    100020: CINEMA_4D_Editor
     400000: //RootNode
     400002: Box02
     400004: Box03
@@ -25,9 +26,15 @@ ModelImporter:
     400014: OilTank01
     400016: OilTank02
     400018: Torus01
+    400020: CINEMA_4D_Editor
+    2000000: CINEMA_4D_Editor
     2100000: verde
     2100002: cromo
     2100004: cosillas
+    2100006: cromo.1
+    2100008: cromo.2
+    2100010: cromo.3
+    2100012: cromo.4
     2300000: Box02
     2300002: Box03
     2300004: Capsule01

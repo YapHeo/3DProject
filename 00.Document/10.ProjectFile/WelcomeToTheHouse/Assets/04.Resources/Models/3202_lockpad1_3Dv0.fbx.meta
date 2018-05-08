@@ -30,7 +30,17 @@ ModelImporter:
     4300002: Box03
     4300004: Capsule02
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cromo
+    second: {fileID: 2100000, guid: 7617204e89d64af49a2d9197af1bab1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: verde
+    second: {fileID: 2100000, guid: 5227336e9b024884d855fa75debf7b99, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
