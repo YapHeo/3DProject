@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-// attach to button object that has a collider
 public class ButtonAction : MonoBehaviour
 {
     public string ButtonValue;              
@@ -12,6 +11,8 @@ public class ButtonAction : MonoBehaviour
     {
         btnSound = gameObject.GetComponent<AudioSource>();
     }
+
+
 
     void OnMouseDown()
     {

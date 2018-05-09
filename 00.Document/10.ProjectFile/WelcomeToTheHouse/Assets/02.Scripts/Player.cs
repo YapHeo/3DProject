@@ -24,17 +24,18 @@ public class Player : MonoBehaviour
 
 
     Ray ray;
+    Ray moveRay;
 
     //ray사거리
     [SerializeField]
     float rayLong;
     //게이지 차는 속도
-    float gageTime = 0.75f;
+    float gageTime = 0.5f;
 
     //이동목적지설정 초기값
-    Vector3 targetPos = new Vector3(-0.803f, 2.0f, -1.276f);
+    Vector3 targetPos = new Vector3(-1.0f, 2.0f, -1.0f);
     //이동속도
-    float movespeed = 0.2f;
+    float movespeed = 0.3f;
 
     void Start()
     {
@@ -58,10 +59,20 @@ public class Player : MonoBehaviour
         ray = Camera.main.ScreenPointToRay(Cameracenter);
 
         RaycastHit hitcoll;
+        RaycastHit movecoll;
 
         //이동에 대한 정보------
         float step = movespeed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
+
+        if (Physics.Raycast(ray, out movecoll, 100, 1 << 9))
+        {
+            if (movecoll.collider.CompareTag("WayPoint"))
+            {
+                targetPos = new Vector3(movecoll.transform.position.x, transform.position.y, movecoll.transform.position.z);
+            }
+        }
+
 
         //layermark를 사용------------ 
         if (Physics.Raycast(ray, out hitcoll, rayLong, 1 << 8))
@@ -78,12 +89,6 @@ public class Player : MonoBehaviour
                     hitcoll.collider.GetComponent<ButtonFunc>().SetTurnOn(true);
 
                 }
-                //바라본 대상이 웨이 포인트일때
-                if (hitcoll.collider.CompareTag("WayPoint"))
-                {
-                    targetPos = new Vector3(hitcoll.transform.position.x, transform.position.y, hitcoll.transform.position.z);
-                }
-
                 // 상호작용이 필요한 아이템
                 if (hitcoll.collider.CompareTag("InteractionItem"))
                 {
