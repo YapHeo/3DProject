@@ -11,7 +11,7 @@ public class ButtonFunc : MonoBehaviour
    
     void Update()
     {
-
+        
     }
 
     public bool GetTurnOn()

@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     //이동속도
     float movespeed = 0.3f;
 
+
     void Start()
     {
         Cameracenter = new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
@@ -87,7 +88,6 @@ public class Player : MonoBehaviour
                 if (hitcoll.collider.CompareTag("Button"))
                 {
                     hitcoll.collider.GetComponent<ButtonFunc>().SetTurnOn(true);
-
                 }
                 // 상호작용이 필요한 아이템
                 if (hitcoll.collider.CompareTag("InteractionItem"))
