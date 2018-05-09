@@ -21,4 +21,9 @@ public class Item : MonoBehaviour
     {
         return spriteId;
     }
+
+    public int GetInteractionId()
+    {
+        return InteractionId;
+    }
 }

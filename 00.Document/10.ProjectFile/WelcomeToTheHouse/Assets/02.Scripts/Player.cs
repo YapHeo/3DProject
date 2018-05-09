@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     // 인벤 정보
     public GameObject inventory;
     GameObject inven;
+    GameObject act;
 
     Vector3 Cameracenter;
     float gageAmount;
@@ -31,7 +32,7 @@ public class Player : MonoBehaviour
     float gageTime = 0.75f;
 
     //이동목적지설정 초기값
-    Vector3 targetPos = Vector3.up;
+    Vector3 targetPos = new Vector3(-0.803f, 2.0f, -1.276f);
     //이동속도
     float movespeed = 0.2f;
 
@@ -39,10 +40,12 @@ public class Player : MonoBehaviour
     {
         Cameracenter = new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
 
-        if(SceneManager.GetActiveScene().name == "Stage1" || SceneManager.GetActiveScene().name == "TempJH")
+        if (SceneManager.GetActiveScene().name == "Stage1" || SceneManager.GetActiveScene().name == "TempJH")
         {
             inven = Instantiate(inventory) as GameObject;
             inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
+
+            act = GameObject.Find("PlayerAct");
         }
     }
 
@@ -85,9 +88,12 @@ public class Player : MonoBehaviour
                 if (hitcoll.collider.CompareTag("InteractionItem"))
                 {
                     // 이거 개천재(tempId)
-                    tempId = hitcoll.collider.GetComponent<Item>().GetSpriteId();
+                    tempId = hitcoll.collider.GetComponent<Item>().GetInteractionId();
+
+                    Debug.Log("InteractionID : " + hitcoll.collider.GetComponent<Item>().GetInteractionId());
+
                     // 인벤 위치 수정 필요 플레이어와 아이템 거리를 사용한 코드로 변경이 필요
-                    inven.transform.position = new Vector3((transform.position.x + hitcoll.collider.gameObject.transform.position.x) / 2.0f, hitcoll.collider.gameObject.transform.position.y, (transform.position.z + hitcoll.collider.gameObject.transform.position.z) / 2.0f);
+                    inven.transform.position = new Vector3((transform.position.x + hitcoll.collider.gameObject.transform.position.x) / 2.0f, hitcoll.collider.gameObject.transform.position.y + 1.5f, (transform.position.z + hitcoll.collider.gameObject.transform.position.z) / 2.0f);
                 }
                 // 인벤에 들어가는거
                 if (hitcoll.collider.CompareTag("InvenItem"))
@@ -105,8 +111,12 @@ public class Player : MonoBehaviour
                     // 이거 개천재(tempId)
                     if (tempId == hitcoll.collider.GetComponent<Slot>().GetID())
                     {
+                        Debug.Log("InteractionID == SpriteID : " + tempId + " == " + hitcoll.collider.GetComponent<Slot>().GetID());
+
                         hitcoll.collider.GetComponentInChildren<SpriteRenderer>().sprite = null;
-                        Destroy(GameObject.Find("book"));
+                        hitcoll.collider.GetComponent<Slot>().SetID(-1);
+
+                        act.GetComponent<PlayerAct>().PlayerAction(tempId);
                     }
                 }
 
@@ -120,6 +130,11 @@ public class Player : MonoBehaviour
                 //{
 
                 //}
+
+                if (gageAmount > 1)
+                {
+                    gageAmount = 0;
+                }
             }
 
         }
