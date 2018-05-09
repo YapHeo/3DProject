@@ -3,15 +3,9 @@ using System.Collections;
 
 public class ButtonAction : ButtonFunc
 {
-    public string ButtonValue;              
-    public LockCodeCtrl CodeController;                                            
+    public string ButtonValue;
+    public LockCodeCtrl CodeController;
     private AudioSource btnSound;
-
-    bool sw = false;
-    bool btn = false;
-
-    float interval = 1.0f;
-    float time = 0;
 
     void Start()
     {
@@ -21,31 +15,17 @@ public class ButtonAction : ButtonFunc
 
     void Update()
     {
-        sw = GetTurnOn();
-        if (sw)
+        if (!turnON)
         {
-
-            time += Time.deltaTime;
-
-            if (time > interval)
-            {
-                time = 0;
-                OnBtnDown();
-                return;
-            }
+           return;
         }
-
-        sw = false;
-
+        OnBtnDown();
     }
 
     void OnBtnDown()
     {
-        if (btn)
-        {
-            CodeController.addKeyInput(ButtonValue);
-            btnSound.Play();
-        }
+        CodeController.addKeyInput(ButtonValue);
+        btnSound.Play();
+        turnON = false;
     }
-
 }

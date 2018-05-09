@@ -2,7 +2,7 @@
 
 public class ButtonFunc : MonoBehaviour
 {
-    bool turnON = false;
+    protected bool turnON = false;
 
     void Start()
     {
