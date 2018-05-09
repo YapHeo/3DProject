@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 23826366763351704}
   - component: {fileID: 95108128814613112}
   - component: {fileID: 64473106954593046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: paper1
-  m_TagString: Untagged
+  m_TagString: InvenItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,13 +36,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1664788147666324}
-  m_LocalRotation: {x: 0.0005892565, y: -0.20546442, z: -0.002806721, w: 0.9786604}
-  m_LocalPosition: {x: -2.69, y: 0.25, z: 0.31}
-  m_LocalScale: {x: 1.5884788, y: 1.529188, z: 0.76789814}
+  m_LocalRotation: {x: 0.52034515, y: 0.50657475, z: -0.492707, w: 0.47944006}
+  m_LocalPosition: {x: -1.917, y: 3.781, z: -1.525}
+  m_LocalScale: {x: 10, y: 6, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -23.713001, z: -0.32900003}
+  m_LocalEulerAnglesHint: {x: 86.50001, y: 206.258, z: 116.287}
 --- !u!23 &23826366763351704
 MeshRenderer:
   m_ObjectHideFlags: 1

@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
                 //바라본 대상이 웨이 포인트일때
                 if (hitcoll.collider.CompareTag("WayPoint"))
                 {
-                    targetPos = new Vector3(hitcoll.transform.position.x, transform.position.y, hitcoll.transform.position.z);                   
+                    targetPos = new Vector3(hitcoll.transform.position.x, transform.position.y, hitcoll.transform.position.z);
                 }
 
                 // 상호작용이 필요한 아이템
@@ -93,6 +93,9 @@ public class Player : MonoBehaviour
                 if (hitcoll.collider.CompareTag("InvenItem"))
                 {
                     inven.GetComponent<Inventory>().AddItem(hitcoll.collider.GetComponent<Item>().GetSpriteId());
+
+                    Debug.Log("SpriteID : " + hitcoll.collider.GetComponent<Item>().GetSpriteId());
+
                     Destroy(hitcoll.collider.gameObject);
                 }
 
