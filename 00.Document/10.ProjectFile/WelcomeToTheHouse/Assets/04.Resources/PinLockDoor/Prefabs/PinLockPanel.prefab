@@ -817,7 +817,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -829,7 +829,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -841,7 +841,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &8234880
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1617,7 +1617,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1629,7 +1629,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1641,7 +1641,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &8294870
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1734,7 +1734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonValue: 1
-  myCodeController: {fileID: 11419588}
+  CodeController: {fileID: 0}
 --- !u!114 &11411090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1747,7 +1747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonValue: 9
-  myCodeController: {fileID: 11419588}
+  CodeController: {fileID: 0}
 --- !u!114 &11419588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1785,7 +1785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonValue: 4
-  myCodeController: {fileID: 11419588}
+  CodeController: {fileID: 0}
 --- !u!114 &11432008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1798,7 +1798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonValue: 7
-  myCodeController: {fileID: 11419588}
+  CodeController: {fileID: 0}
 --- !u!114 &11441324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1811,7 +1811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonValue: CLEAR
-  myCodeController: {fileID: 11419588}
+  CodeController: {fileID: 0}
 --- !u!114 &11444390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1824,7 +1824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonValue: 0
-  myCodeController: {fileID: 11419588}
+  CodeController: {fileID: 0}
 --- !u!114 &11447416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1837,7 +1837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonValue: 6
-  myCodeController: {fileID: 11419588}
+  CodeController: {fileID: 0}
 --- !u!114 &11452686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1850,7 +1850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonValue: 8
-  myCodeController: {fileID: 11419588}
+  CodeController: {fileID: 0}
 --- !u!114 &11473408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1863,7 +1863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonValue: 5
-  myCodeController: {fileID: 11419588}
+  CodeController: {fileID: 0}
 --- !u!114 &11475406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1876,7 +1876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonValue: SUBMIT
-  myCodeController: {fileID: 11419588}
+  CodeController: {fileID: 0}
 --- !u!114 &11476878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1889,7 +1889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonValue: 2
-  myCodeController: {fileID: 11419588}
+  CodeController: {fileID: 0}
 --- !u!114 &11494630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1902,7 +1902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonValue: 3
-  myCodeController: {fileID: 11419588}
+  CodeController: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

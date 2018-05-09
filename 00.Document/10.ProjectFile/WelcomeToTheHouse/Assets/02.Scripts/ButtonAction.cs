@@ -1,0 +1,21 @@
+﻿using UnityEngine;
+using System.Collections;
+
+// attach to button object that has a collider
+public class ButtonAction : MonoBehaviour
+{
+    public string ButtonValue;              
+    public LockCodeCtrl CodeController;                                            
+    private AudioSource btnSound;
+
+    void Start()
+    {
+        btnSound = gameObject.GetComponent<AudioSource>();
+    }
+
+    void OnMouseDown()
+    {
+        CodeController.addKeyInput(ButtonValue);
+        btnSound.Play();
+    }
+}
