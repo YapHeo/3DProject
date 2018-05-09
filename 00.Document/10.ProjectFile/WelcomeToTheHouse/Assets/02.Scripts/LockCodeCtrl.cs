@@ -7,7 +7,9 @@ public class LockCodeCtrl : MonoBehaviour
     Text DisplayText;
 
     [SerializeField]
-    GameObject GameObjDoor;
+    GameObject GameObj;
+
+    Animator animator;
 
     [SerializeField]
     string lockCode = "1234";
@@ -27,6 +29,7 @@ public class LockCodeCtrl : MonoBehaviour
     {
         inputCode = "";
         writingText(DisplayDefault);
+        animator = GameObj.GetComponent<Animator>();
     }
 
     public void writingText(string newText)
@@ -59,6 +62,7 @@ public class LockCodeCtrl : MonoBehaviour
         {
             writingText(DisplayOPEN);
             AudioConfirm.Play();
+            animator.SetBool("Anim_Bool", true);
         }
         else
         {
