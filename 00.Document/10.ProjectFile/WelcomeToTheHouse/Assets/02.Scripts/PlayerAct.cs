@@ -40,7 +40,12 @@ public class PlayerAct : MonoBehaviour
             paperTemp = Instantiate(paper) as GameObject;
 
             paperTemp.transform.position = new Vector3(-0.783f, 1.151f, -2.515f);
+            paperTemp.transform.localScale = new Vector3(0.003576209f * 2, 0.007152418f, 0.002384139f * 2);
             paperTemp.transform.rotation = Quaternion.Euler(0f, -90.0f, 0f);
+
+            GameObject stand = GameObject.Find("NightstandDetail01");
+            stand.tag = "Untagged";
+            stand.layer = 0;
 
             isAction[1] = false;
         }

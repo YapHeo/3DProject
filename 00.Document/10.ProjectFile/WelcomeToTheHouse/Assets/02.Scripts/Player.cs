@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
                     Debug.Log("InteractionID : " + hitcoll.collider.GetComponent<Item>().GetInteractionId());
 
                     // 인벤 위치 수정 필요 플레이어와 아이템 거리를 사용한 코드로 변경이 필요
-                    inven.transform.position = new Vector3((transform.position.x + hitcoll.collider.gameObject.transform.position.x) / 2.0f, hitcoll.collider.gameObject.transform.position.y + 1.5f, (transform.position.z + hitcoll.collider.gameObject.transform.position.z) / 2.0f);
+                    inven.transform.position = new Vector3((transform.position.x + hitcoll.collider.gameObject.transform.position.x) / 2.0f, hitcoll.collider.gameObject.transform.position.y + 1.8f, (transform.position.z + hitcoll.collider.gameObject.transform.position.z) / 2.0f);
                 }
                 // 인벤에 들어가는거
                 if (hitcoll.collider.CompareTag("InvenItem"))
@@ -108,6 +108,8 @@ public class Player : MonoBehaviour
                 // 슬롯과 상호작용
                 if (hitcoll.collider.CompareTag("Slot"))
                 {
+                    
+
                     // 이거 개천재(tempId)
                     if (tempId == hitcoll.collider.GetComponent<Slot>().GetID())
                     {
@@ -115,6 +117,8 @@ public class Player : MonoBehaviour
 
                         hitcoll.collider.GetComponentInChildren<SpriteRenderer>().sprite = null;
                         hitcoll.collider.GetComponent<Slot>().SetID(-1);
+
+                        inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
 
                         act.GetComponent<PlayerAct>().PlayerAction(tempId);
                     }
