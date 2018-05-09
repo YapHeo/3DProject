@@ -93,6 +93,9 @@ public class Player : MonoBehaviour
                 if (hitcoll.collider.CompareTag("InvenItem"))
                 {
                     inven.GetComponent<Inventory>().AddItem(hitcoll.collider.GetComponent<Item>().GetSpriteId());
+
+                    Debug.Log("SpriteID : " + hitcoll.collider.GetComponent<Item>().GetSpriteId());
+
                     Destroy(hitcoll.collider.gameObject);
                 }
 

@@ -18,7 +18,5 @@ public class WayPoint : MonoBehaviour
         color = Mathf.PingPong(Time.time * 255, 255);
 
         mate.color = new Color(color / 255, color / 255, color / 255, 1);
-
-        Debug.Log(mate.color);
     }
 }
