@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33789819646015370}
   - component: {fileID: 64571448101401518}
   - component: {fileID: 23591883862107852}
-  m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
+  - component: {fileID: 114888446930825146}
+  m_Layer: 8
+  m_Name: PasswordTable
+  m_TagString: InvenItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,6 +57,7 @@ GameObject:
   - component: {fileID: 23421538430930712}
   - component: {fileID: 64779884092839314}
   - component: {fileID: 95559716870777776}
+  - component: {fileID: 114434355922139414}
   m_Layer: 8
   m_Name: NightstandDetail01
   m_TagString: InteractionItem
@@ -108,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1858444626525834}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.21964233, y: 0.2278564, z: 0.292}
+  m_LocalPosition: {x: -0.21964233, y: 0.2278564, z: 0.285}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4434130926042786}
@@ -441,3 +443,25 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114434355922139414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1735594343333632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6699d7b747dc88643a7c80416f31e32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114888446930825146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1262768674235682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b891611e1101630488616ef35c91e0c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
