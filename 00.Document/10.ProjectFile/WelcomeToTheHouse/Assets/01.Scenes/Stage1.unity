@@ -1580,7 +1580,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 403701512}
   m_LocalRotation: {x: -0.00630994, y: 0.70707864, z: -0.70707864, w: -0.00630994}
-  m_LocalPosition: {x: -3.32, y: 1.6216904, z: 2.88}
+  m_LocalPosition: {x: -3.33, y: 1.6216904, z: 2.19}
   m_LocalScale: {x: -0.94758016, y: -1, z: -0.9486684}
   m_Children:
   - {fileID: 329140836}
@@ -4913,6 +4913,7 @@ GameObject:
   - component: {fileID: 1152927063}
   - component: {fileID: 1152927062}
   - component: {fileID: 1152927064}
+  - component: {fileID: 1152927065}
   m_Layer: 0
   m_Name: closet door2
   m_TagString: Untagged
@@ -4988,6 +4989,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4658341, y: 0.09579308, z: 4.9787817}
   m_Center: {x: -0.70635736, y: 0.0014939889, z: 0.3856618}
+--- !u!95 &1152927065
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1152927060}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 07dc635dbaf837e4d9e27e9ba867aeb2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1162758546
 Prefab:
   m_ObjectHideFlags: 0
@@ -5089,8 +5107,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1267516594}
-  - component: {fileID: 1267516593}
   - component: {fileID: 1267516595}
+  - component: {fileID: 1267516593}
   m_Layer: 0
   m_Name: ID_closet_3D_ver01
   m_TagString: Untagged
@@ -5102,13 +5120,12 @@ GameObject:
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: d641cace348e2394aa996c2c7ffde85b,
-    type: 3}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1267516592}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: d641cace348e2394aa996c2c7ffde85b, type: 3}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f61396bd0ecff142a24f3824587357b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7165,6 +7182,7 @@ GameObject:
   - component: {fileID: 1904061849}
   - component: {fileID: 1904061848}
   - component: {fileID: 1904061850}
+  - component: {fileID: 1904061851}
   m_Layer: 0
   m_Name: closet door1
   m_TagString: Untagged
@@ -7240,6 +7258,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4732007, y: 0.10026123, z: 5.0038013}
   m_Center: {x: -0.747585, y: -0.044652708, z: -0.108245626}
+--- !u!95 &1904061851
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1904061846}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0bf527ec9c09f6748a7110ef475d1fe9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1910211940
 GameObject:
   m_ObjectHideFlags: 0
@@ -7250,6 +7285,7 @@ GameObject:
   - component: {fileID: 1910211941}
   - component: {fileID: 1910211943}
   - component: {fileID: 1910211942}
+  - component: {fileID: 1910211944}
   m_Layer: 0
   m_Name: Box03
   m_TagString: Untagged
@@ -7314,6 +7350,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1910211940}
   m_Mesh: {fileID: 4300000, guid: 496406c950241d84ab299a40d7895284, type: 3}
+--- !u!65 &1910211944
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1910211940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.9985228, y: 5.666797, z: 5.9985237}
+  m_Center: {x: 0, y: -0.02158988, z: 2.9992628}
 --- !u!1001 &1911826251
 Prefab:
   m_ObjectHideFlags: 0
