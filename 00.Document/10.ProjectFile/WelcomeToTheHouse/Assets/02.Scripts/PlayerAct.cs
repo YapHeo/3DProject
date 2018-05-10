@@ -10,6 +10,9 @@ public class PlayerAct : MonoBehaviour
     public GameObject passwordTable;
     GameObject passwordTableTemp;
 
+    public GameObject magicSquare;
+    GameObject magicSquareTemp;
+
     bool[] isAction;
 
     void Start()
@@ -24,6 +27,7 @@ public class PlayerAct : MonoBehaviour
     {
         StandOnPaper();
         PhotoFrameOnPasswordTable();
+        StandOnMagicSquare();
     }
 
     public void PlayerAction(int _id)
@@ -65,11 +69,37 @@ public class PlayerAct : MonoBehaviour
             passwordTableTemp.transform.localScale = new Vector3(10.0f, 6.0f, 1.5f);
             passwordTableTemp.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
 
+            passwordTableTemp.tag = "Untagged";
+            passwordTableTemp.layer = 0;
+
             GameObject photoFrame = GameObject.Find("Paint_01");
             photoFrame.tag = "Untagged";
             photoFrame.layer = 0;
 
             isAction[2] = false;
+        }
+    }
+
+    void StandOnMagicSquare()
+    {
+        if (isAction[3] == true)
+        {
+            Debug.Log("StandOnMagicSquare");
+
+            magicSquareTemp = Instantiate(magicSquare) as GameObject;
+
+            magicSquareTemp.transform.position = new Vector3(2.088736f, 1.433698f, -2.562197f);
+            magicSquareTemp.transform.localScale = new Vector3(0.03929003f, 0.03929402f, 0.0445646f);
+            magicSquareTemp.transform.rotation = Quaternion.Euler(-0.8200001f, 0f, 0f);
+
+            magicSquareTemp.tag = "Untagged";
+            magicSquareTemp.layer = 0;
+
+            GameObject stand = GameObject.Find("Cabinet");
+            stand.tag = "Untagged";
+            stand.layer = 0;
+
+            isAction[3] = false;
         }
     }
 }
