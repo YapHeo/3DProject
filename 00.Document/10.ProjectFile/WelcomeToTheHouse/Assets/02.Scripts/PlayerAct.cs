@@ -13,6 +13,9 @@ public class PlayerAct : MonoBehaviour
     public GameObject magicSquare;
     GameObject magicSquareTemp;
 
+    public GameObject clockQuiz;
+    GameObject clockQuizTemp;
+
     bool[] isAction;
 
     void Start()
@@ -28,6 +31,7 @@ public class PlayerAct : MonoBehaviour
         StandOnPaper();
         PhotoFrameOnPasswordTable();
         StandOnMagicSquare();
+        SmallSafeOnClockQuiz();
     }
 
     public void PlayerAction(int _id)
@@ -100,6 +104,29 @@ public class PlayerAct : MonoBehaviour
             stand.layer = 0;
 
             isAction[3] = false;
+        }
+    }
+
+    void SmallSafeOnClockQuiz()
+    {
+        if (isAction[4] == true)
+        {
+            Debug.Log("SmallSafeOnClockQuiz");
+
+            clockQuizTemp = Instantiate(clockQuiz) as GameObject;
+
+            clockQuizTemp.transform.position = new Vector3(1.003f, 1.105f, -1.055f);
+            clockQuizTemp.transform.localScale = new Vector3(0.04f, 0.04f, 0.04f);
+            clockQuizTemp.transform.rotation = Quaternion.Euler(0f, 3.346f, 0f);
+
+            clockQuizTemp.tag = "Untagged";
+            clockQuizTemp.layer = 0;
+
+            GameObject smallSafe = GameObject.Find("Box03");
+            smallSafe.tag = "Untagged";
+            smallSafe.layer = 0;
+
+            isAction[4] = false;
         }
     }
 }
