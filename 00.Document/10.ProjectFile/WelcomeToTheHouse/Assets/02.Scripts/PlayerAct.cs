@@ -7,6 +7,9 @@ public class PlayerAct : MonoBehaviour
     public GameObject paper;
     GameObject paperTemp;
 
+    public GameObject passwordTable;
+    GameObject passwordTableTemp;
+
     bool[] isAction;
 
     void Start()
@@ -20,20 +23,19 @@ public class PlayerAct : MonoBehaviour
     void Update()
     {
         StandOnPaper();
+        PhotoFrameOnPasswordTable();
     }
 
     public void PlayerAction(int _id)
     {
-        // 행동 관리 한번, 지속 관리
         Debug.Log("PlayerActionId : " + _id);
 
         isAction[_id] = true;
-       
     }
 
     void StandOnPaper()
     {
-        if(isAction[1] == true)
+        if (isAction[1] == true)
         {
             Debug.Log("StandOnPaper");
 
@@ -48,6 +50,26 @@ public class PlayerAct : MonoBehaviour
             stand.layer = 0;
 
             isAction[1] = false;
+        }
+    }
+
+    void PhotoFrameOnPasswordTable()
+    {
+        if (isAction[2] == true)
+        {
+            Debug.Log("PhotoFrameOnPasswordTable");
+
+            passwordTableTemp = Instantiate(passwordTable) as GameObject;
+
+            passwordTableTemp.transform.position = new Vector3(-0.915f, 2.631f, -2.806f);
+            passwordTableTemp.transform.localScale = new Vector3(10.0f, 6.0f, 1.5f);
+            passwordTableTemp.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+
+            GameObject photoFrame = GameObject.Find("Paint_01");
+            photoFrame.tag = "Untagged";
+            photoFrame.layer = 0;
+
+            isAction[2] = false;
         }
     }
 }
