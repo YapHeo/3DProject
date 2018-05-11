@@ -23,17 +23,17 @@ public class Player : MonoBehaviour
     int tempId = -1;
 
 
-    Ray ray;
-    Ray moveRay;
+    Ray ray;    
 
     //ray사거리
     [SerializeField]
     float rayLong;
     //게이지 차는 속도
-    float gageTime = 0.5f;
+    float gageTime = 0.75f;
 
     //이동목적지설정 초기값
     Vector3 targetPos = new Vector3(-1.0f, 2.0f, -1.0f);
+    
     //이동속도
     float movespeed = 0.3f;
 
@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        
         Cursorgage.fillAmount = gageAmount;
 
         ray = Camera.main.ScreenPointToRay(Cameracenter);
@@ -63,8 +64,14 @@ public class Player : MonoBehaviour
         float step = movespeed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
 
-        if (Physics.Raycast(ray, out movecoll, 100, 1 << 9))
+        if (Physics.Raycast(ray, out movecoll, 100, 1 << 8))
         {
+            if (movecoll.collider.CompareTag("Nothing"))
+            {
+                gageAmount = 0;
+                Cursor.gameObject.SetActive(false);
+                idleLook.gameObject.SetActive(true);
+            }
             if (movecoll.collider.CompareTag("WayPoint"))
             {
                 targetPos = new Vector3(movecoll.transform.position.x, transform.position.y, movecoll.transform.position.z);
@@ -73,10 +80,21 @@ public class Player : MonoBehaviour
 
         //layermark를 사용------------ 
         if (Physics.Raycast(ray, out hitcoll, rayLong, 1 << 8))
-        {
-            gageAmount += gageTime * Time.deltaTime;
-            Cursor.gameObject.SetActive(true);
-            idleLook.gameObject.SetActive(false);
+        {   
+            if (hitcoll.collider.CompareTag("Nothing"))
+            {
+                gageAmount = 0;
+                Cursor.gameObject.SetActive(false);
+                idleLook.gameObject.SetActive(true);
+                
+            }
+            else
+            {
+                gageAmount += gageTime * Time.deltaTime;
+                Cursor.gameObject.SetActive(true);
+                idleLook.gameObject.SetActive(false);
+
+            }
 
             if (gageAmount >= 1)
             {
@@ -94,7 +112,8 @@ public class Player : MonoBehaviour
                     Debug.Log("InteractionID : " + hitcoll.collider.GetComponent<Item>().GetInteractionId());
 
                     // 인벤 위치 수정 필요 플레이어와 아이템 거리를 사용한 코드로 변경이 필요
-                    inven.transform.position = new Vector3((transform.position.x + hitcoll.collider.gameObject.transform.position.x) / 2.0f, transform.position.y + hitcoll.collider.gameObject.transform.position.y / 2.0f, (transform.position.z + hitcoll.collider.gameObject.transform.position.z) / 2.0f);
+                    inven.transform.position = new Vector3((transform.position.x + hitcoll.collider.gameObject.transform.position.x) / 2.0f,
+                        (transform.position.y + hitcoll.collider.gameObject.transform.position.y) / 2.0f, (transform.position.z + hitcoll.collider.gameObject.transform.position.z) / 2.0f);
                 }
                 // 인벤에 들어가는거
                 if (hitcoll.collider.CompareTag("InvenItem"))
@@ -128,11 +147,6 @@ public class Player : MonoBehaviour
                 {
                     inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
                 }
-                //
-                //if (hitcoll.collider.CompareTag("FakeItem"))
-                //{
-
-                //}
 
                 if (gageAmount > 1)
                 {
@@ -147,5 +161,6 @@ public class Player : MonoBehaviour
             Cursor.gameObject.SetActive(false);
             idleLook.gameObject.SetActive(true);
         }
+
     }
 }
