@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23000012622364910}
   - component: {fileID: 64000010308521978}
   m_Layer: 0
-  m_Name: RHEF_GenericCliffA_Mobile
+  m_Name: CliffA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
