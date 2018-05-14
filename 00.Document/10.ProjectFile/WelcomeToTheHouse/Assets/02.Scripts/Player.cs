@@ -57,7 +57,9 @@ public class Player : MonoBehaviour
 
         ray = Camera.main.ScreenPointToRay(Cameracenter);
 
+        //그외에 나머지 coll
         RaycastHit hitcoll;
+        //이동용 rayhit
         RaycastHit movecoll;
 
         //이동에 대한 정보------
@@ -124,7 +126,6 @@ public class Player : MonoBehaviour
 
                     Destroy(hitcoll.collider.gameObject);
                 }
-
                 // 슬롯과 상호작용
                 if (hitcoll.collider.CompareTag("Slot"))
                 {             
@@ -141,13 +142,11 @@ public class Player : MonoBehaviour
                         act.GetComponent<PlayerAct>().PlayerAction(tempId);
                     }
                 }
-
                 // 인벤 닫기
                 if (hitcoll.collider.CompareTag("InvenClose"))
                 {
                     inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
                 }
-
                 if (gageAmount > 1)
                 {
                     gageAmount = 0;
