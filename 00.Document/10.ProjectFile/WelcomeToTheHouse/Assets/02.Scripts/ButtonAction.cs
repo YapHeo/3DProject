@@ -20,7 +20,7 @@ public class ButtonAction : ButtonFunc
            return;
         }
         OnBtnDown();
-    }
+    }   
 
     void OnBtnDown()
     {
