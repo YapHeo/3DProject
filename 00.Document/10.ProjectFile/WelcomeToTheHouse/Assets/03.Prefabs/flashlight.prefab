@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4561496194626912}
   - component: {fileID: 33723531141676556}
   - component: {fileID: 23885612724836970}
-  - component: {fileID: 64295474425399282}
+  - component: {fileID: 136678895982614560}
   m_Layer: 8
   m_Name: flashlight
   m_TagString: Button
@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403448390247288}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.85, y: 0.772, z: -0.84}
+  m_LocalPosition: {x: 0.396, y: 1.948, z: -1.181}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 4371606904236596}
@@ -87,7 +87,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 67fc4ffeb8db9a544b4dd6905a9c5841, type: 3}
+  - {fileID: 2100000, guid: 5acbd789eec6cce41b9545c5243e5217, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,8 +155,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403448390247288}
   m_Mesh: {fileID: 4300000, guid: f38266497a798344193823048506b53a, type: 3}
---- !u!64 &64295474425399282
-MeshCollider:
+--- !u!136 &136678895982614560
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -164,8 +164,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: f38266497a798344193823048506b53a, type: 3}
+  m_Radius: 7.68
+  m_Height: 94.61
+  m_Direction: 2
+  m_Center: {x: 0, y: -6.6, z: 18.6}

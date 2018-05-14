@@ -9,6 +9,6 @@ public class StartBtn : ButtonFunc
         {
             return;
         }
-        SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("Tutorial");
     }
 }

@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     //이동속도
     float movespeed = 0.3f;
 
+    bool movingState = false;
 
     string sceneName;
 
@@ -77,7 +78,10 @@ public class Player : MonoBehaviour
         //이동에 대한 정보------
         float step = movespeed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
-
+        if (transform.position == targetPos)
+        {
+            movingState = false;
+        }
         if (Physics.Raycast(ray, out movecoll, 100, 1 << 8))
         {
             if (movecoll.collider.CompareTag("Nothing"))
@@ -89,13 +93,14 @@ public class Player : MonoBehaviour
             if (movecoll.collider.CompareTag("WayPoint"))
             {
                 targetPos = new Vector3(movecoll.transform.position.x, transform.position.y, movecoll.transform.position.z);
+                movingState = true;
             }
         }
 
         //layermark를 사용------------ 
         if (Physics.Raycast(ray, out hitcoll, rayLong, 1 << 8))
         {   
-            if (hitcoll.collider.CompareTag("Nothing"))
+            if (hitcoll.collider.CompareTag("Nothing") || movecoll.collider.CompareTag("WayPoint") || movingState)
             {
                 gageAmount = 0;
                 Cursor.gameObject.SetActive(false);
