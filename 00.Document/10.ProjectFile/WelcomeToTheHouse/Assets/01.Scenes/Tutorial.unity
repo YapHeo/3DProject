@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -178,9 +178,32 @@ Prefab:
       propertyPath: m_TagString
       value: Button
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1403448390247288, guid: c83af0eb9f5a7974da9acb47dd559745, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 64295474425399282, guid: c83af0eb9f5a7974da9acb47dd559745, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c83af0eb9f5a7974da9acb47dd559745, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &459627288 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1403448390247288, guid: c83af0eb9f5a7974da9acb47dd559745,
+    type: 2}
+  m_PrefabInternal: {fileID: 459627287}
+--- !u!136 &459627289
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 459627288}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 7.68
+  m_Height: 94.61
+  m_Direction: 2
+  m_Center: {x: 0, y: -6.6, z: 18.6}
 --- !u!1001 &649620064
 Prefab:
   m_ObjectHideFlags: 0
@@ -307,6 +330,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4995048442090696, guid: b3abda550a9f2a74e9195db071f89cb8, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177752610387014, guid: b3abda550a9f2a74e9195db071f89cb8,
+        type: 2}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224685478518709388, guid: b3abda550a9f2a74e9195db071f89cb8,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 224685478518709388, guid: b3abda550a9f2a74e9195db071f89cb8,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381906738665012, guid: b3abda550a9f2a74e9195db071f89cb8, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102609836029344, guid: b3abda550a9f2a74e9195db071f89cb8, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
