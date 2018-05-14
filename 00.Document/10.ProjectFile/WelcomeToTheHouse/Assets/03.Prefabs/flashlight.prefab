@@ -39,9 +39,9 @@ GameObject:
   - component: {fileID: 33723531141676556}
   - component: {fileID: 23885612724836970}
   - component: {fileID: 64295474425399282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flashlight
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,7 +154,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403448390247288}
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300000, guid: f38266497a798344193823048506b53a, type: 3}
 --- !u!64 &64295474425399282
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -168,4 +168,4 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300000, guid: f38266497a798344193823048506b53a, type: 3}
