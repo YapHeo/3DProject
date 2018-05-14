@@ -5,10 +5,10 @@ public class GameManager : MonoBehaviour
     bool sceneSW = false; 
     int stageNum = 0;
 
-    private void Awake()
-    {    
-        DontDestroyOnLoad(transform.gameObject);
-    }
+    //private void Awake()
+    //{    
+    //    DontDestroyOnLoad(transform.gameObject);
+    //}
 
     void Start()
     {
