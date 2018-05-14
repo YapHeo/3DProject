@@ -117,6 +117,9 @@ NavMeshSettings:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 6fe0523... Revert "[차정현]Stage 초안"
 --- !u!1001 &64889509
 Prefab:
   m_ObjectHideFlags: 0
@@ -589,10 +592,13 @@ MeshCollider:
 >>>>>>> 4422a2836b712b64bf9b76c7297b8c1a675e157e
 =======
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
+<<<<<<< HEAD
 =======
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
 =======
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
+=======
+>>>>>>> parent of 6fe0523... Revert "[차정현]Stage 초안"
 --- !u!1 &425555658
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +668,9 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 6fe0523... Revert "[차정현]Stage 초안"
 --- !u!1001 &616829690
 Prefab:
   m_ObjectHideFlags: 0
@@ -797,12 +806,15 @@ Transform:
 =======
 --- !u!1001 &1479578033
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
+<<<<<<< HEAD
 =======
 --- !u!1001 &1479578033
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
 =======
 --- !u!1001 &1479578033
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
+=======
+>>>>>>> parent of 6fe0523... Revert "[차정현]Stage 초안"
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -827,6 +839,9 @@ Prefab:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 6fe0523... Revert "[차정현]Stage 초안"
       value: 0.00000008146034
       objectReference: {fileID: 0}
     - target: {fileID: 4618862827231826, guid: 749252d50a047ec4f8b7a068120242ed, type: 2}
@@ -1000,10 +1015,13 @@ Prefab:
 >>>>>>> 4422a2836b712b64bf9b76c7297b8c1a675e157e
 =======
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
+<<<<<<< HEAD
 =======
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
 =======
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
+=======
+>>>>>>> parent of 6fe0523... Revert "[차정현]Stage 초안"
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4995048442090696, guid: b3abda550a9f2a74e9195db071f89cb8, type: 2}
@@ -1029,6 +1047,9 @@ Prefab:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 6fe0523... Revert "[차정현]Stage 초안"
 --- !u!1001 &817313584
 Prefab:
   m_ObjectHideFlags: 0
@@ -3290,7 +3311,10 @@ MeshCollider:
 >>>>>>> 4422a2836b712b64bf9b76c7297b8c1a675e157e
 =======
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
+<<<<<<< HEAD
 =======
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
 =======
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
+=======
+>>>>>>> parent of 6fe0523... Revert "[차정현]Stage 초안"
