@@ -3,15 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class QuitBtn : ButtonFunc
 {
-    bool sw= false;
-
     void Update()
     {
-        sw = GetTurnOn();
-        if (sw == true)
+        if (!turnON)
         {
-            sw = false;
-            Application.Quit();
+            return;
         }
+        Application.Quit();
     }
 }

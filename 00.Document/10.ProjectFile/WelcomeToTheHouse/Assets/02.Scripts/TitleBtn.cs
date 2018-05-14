@@ -1,16 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 public class TitleBtn : ButtonFunc
-{
-    bool sw = false;
-    
+{    
     void Update()
     {
-        sw = GetTurnOn();
-        if (sw == true)
+        if (!turnON)
         {
-            sw = false;
-            SceneManager.LoadScene("Title");
+            return;
         }
+        SceneManager.LoadScene("Title");
     }
 }

@@ -3,16 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class StartBtn : ButtonFunc
 {
-    bool sw = false;
-
     void Update()
     {
-        sw = GetTurnOn();
-        if (sw == true)
+        if (!turnON)
         {
-            sw = false;
-            SceneManager.LoadScene("Stage1");
+            return;
         }
-           
+        SceneManager.LoadScene("Stage1");
     }
 }
