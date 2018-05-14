@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
 
     //ray사거리
     [SerializeField]
-    float rayLong;
+    float rayLong = 60;
     //게이지 차는 속도
     float gageTime = 0.75f;
 
@@ -37,10 +37,13 @@ public class Player : MonoBehaviour
     //이동속도
     float movespeed = 0.3f;
 
+
+    string sceneName;
+
     void Start()
     {
         Cameracenter = new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
-
+        //0514 실험 끝나고 삭제
         if (SceneManager.GetActiveScene().name == "Stage1" || SceneManager.GetActiveScene().name == "TempJH")
         {
             inven = Instantiate(inventory) as GameObject;
@@ -48,11 +51,20 @@ public class Player : MonoBehaviour
 
             act = GameObject.Find("PlayerAct");
         }
+
+        sceneName = Application.loadedLevelName;
+
     }
 
     void Update()
     {
-        
+
+        if (sceneName == "Stage1")
+        {
+            rayLong = 2;
+        }
+ 
+
         Cursorgage.fillAmount = gageAmount;
 
         ray = Camera.main.ScreenPointToRay(Cameracenter);
@@ -100,7 +112,7 @@ public class Player : MonoBehaviour
 
             if (gageAmount >= 1)
             {
-                //바라본대상이 버튼일 때
+                //바라본대상이 단순 버튼식 오브젝트일 때
                 if (hitcoll.collider.CompareTag("Button"))
                 {
                     hitcoll.collider.GetComponent<ButtonFunc>().SetTurnOn(true);
