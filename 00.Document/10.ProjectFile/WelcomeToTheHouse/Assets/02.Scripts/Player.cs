@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
     void Update()
     {
 
-        if (sceneName == "Stage1")
+        if (sceneName == "Stage" || sceneName == "Tutorial")
         {
             rayLong = 2;
         }
