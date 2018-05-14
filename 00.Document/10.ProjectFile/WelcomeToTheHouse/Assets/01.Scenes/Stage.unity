@@ -116,6 +116,7 @@ NavMeshSettings:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &64889509
 Prefab:
   m_ObjectHideFlags: 0
@@ -590,6 +591,8 @@ MeshCollider:
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
 =======
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
+=======
+>>>>>>> parent of ceb8255... [차정현]Stage 초안
 --- !u!1 &425555658
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,6 +658,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -796,6 +800,9 @@ Transform:
 =======
 --- !u!1001 &1479578033
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
+=======
+--- !u!1001 &1479578033
+>>>>>>> parent of ceb8255... [차정현]Stage 초안
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -816,6 +823,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4995048442090696, guid: b3abda550a9f2a74e9195db071f89cb8, type: 2}
       propertyPath: m_LocalRotation.x
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -994,6 +1002,8 @@ Prefab:
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
 =======
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
+=======
+>>>>>>> parent of ceb8255... [차정현]Stage 초안
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4995048442090696, guid: b3abda550a9f2a74e9195db071f89cb8, type: 2}
@@ -1015,6 +1025,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3abda550a9f2a74e9195db071f89cb8, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3277,6 +3288,8 @@ MeshCollider:
   m_Mesh: {fileID: 4300000, guid: ed676e4f39c168549bec09ecb638c51a, type: 3}
 =======
 >>>>>>> 4422a2836b712b64bf9b76c7297b8c1a675e157e
+=======
+>>>>>>> parent of ceb8255... [차정현]Stage 초안
 =======
 >>>>>>> parent of ceb8255... [차정현]Stage 초안
 =======
