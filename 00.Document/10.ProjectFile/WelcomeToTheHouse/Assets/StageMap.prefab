@@ -11679,6 +11679,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!23 &23379091603712682
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -11725,6 +11726,9 @@ MeshRenderer:
 =======
 --- !u!23 &23386436975699378
 >>>>>>> parent of 14b5c4f... 간트차트 업로드
+=======
+--- !u!23 &23350925579743926
+>>>>>>> parent of 53d5ce9... Merge branch 'master' of https://github.com/YapHeo/3DProject
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

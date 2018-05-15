@@ -114,6 +114,7 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &703186109
 Prefab:
   m_ObjectHideFlags: 0
@@ -158,6 +159,8 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!1001 &818161258
 =======
+=======
+>>>>>>> parent of 53d5ce9... Merge branch 'master' of https://github.com/YapHeo/3DProject
 --- !u!1 &137903185
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,6 +258,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &320150600
+<<<<<<< HEAD
+>>>>>>> parent of 53d5ce9... Merge branch 'master' of https://github.com/YapHeo/3DProject
+=======
 >>>>>>> parent of 53d5ce9... Merge branch 'master' of https://github.com/YapHeo/3DProject
 Prefab:
   m_ObjectHideFlags: 0
@@ -301,6 +307,7 @@ Prefab:
     - target: {fileID: 4071992931471158, guid: b3abda550a9f2a74e9195db071f89cb8, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
+<<<<<<< HEAD
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3abda550a9f2a74e9195db071f89cb8, type: 2}
@@ -360,12 +367,20 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: 9efadb905169bc34d8c376cc565a0bd9, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &588943140
+=======
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b3abda550a9f2a74e9195db071f89cb8, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &430701296
+>>>>>>> parent of 53d5ce9... Merge branch 'master' of https://github.com/YapHeo/3DProject
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 4058034939047008, guid: 312ef79e3c593c248a817198e09ffb6a, type: 2}
       propertyPath: m_LocalPosition.x
       value: -3.1124935
@@ -402,12 +417,63 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: 312ef79e3c593c248a817198e09ffb6a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &2138353813
+=======
+    - target: {fileID: 4293078230044216, guid: 9efadb905169bc34d8c376cc565a0bd9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293078230044216, guid: 9efadb905169bc34d8c376cc565a0bd9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -9.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293078230044216, guid: 9efadb905169bc34d8c376cc565a0bd9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 10.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293078230044216, guid: 9efadb905169bc34d8c376cc565a0bd9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293078230044216, guid: 9efadb905169bc34d8c376cc565a0bd9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293078230044216, guid: 9efadb905169bc34d8c376cc565a0bd9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293078230044216, guid: 9efadb905169bc34d8c376cc565a0bd9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293078230044216, guid: 9efadb905169bc34d8c376cc565a0bd9, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293078230044216, guid: 9efadb905169bc34d8c376cc565a0bd9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293078230044216, guid: 9efadb905169bc34d8c376cc565a0bd9, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293078230044216, guid: 9efadb905169bc34d8c376cc565a0bd9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9efadb905169bc34d8c376cc565a0bd9, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &588943140
+>>>>>>> parent of 53d5ce9... Merge branch 'master' of https://github.com/YapHeo/3DProject
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 4602042645392162, guid: 384b6508855993c47a131d2a445364d3, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.87352604
@@ -442,4 +508,40 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 384b6508855993c47a131d2a445364d3, type: 2}
+=======
+    - target: {fileID: 4058034939047008, guid: 312ef79e3c593c248a817198e09ffb6a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.1124935
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058034939047008, guid: 312ef79e3c593c248a817198e09ffb6a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.0271578
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058034939047008, guid: 312ef79e3c593c248a817198e09ffb6a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4.6643496
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058034939047008, guid: 312ef79e3c593c248a817198e09ffb6a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058034939047008, guid: 312ef79e3c593c248a817198e09ffb6a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058034939047008, guid: 312ef79e3c593c248a817198e09ffb6a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058034939047008, guid: 312ef79e3c593c248a817198e09ffb6a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058034939047008, guid: 312ef79e3c593c248a817198e09ffb6a, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 312ef79e3c593c248a817198e09ffb6a, type: 2}
+>>>>>>> parent of 53d5ce9... Merge branch 'master' of https://github.com/YapHeo/3DProject
   m_IsPrefabParent: 0
