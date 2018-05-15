@@ -41,8 +41,9 @@ public class GameManager : MonoBehaviour
             inven = Instantiate(Inventory) as GameObject;
             inven.transform.position = new Vector3(1, 2, -1.2f);
 
-            player.GetComponent<Player>().SettempId(2);
+            player.GetComponent<Player>().SettempId(5);
 
+            //act = GameObject.Find("PlayerAct");
             Debug.Log("Tutorial");
         }
 
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
             //인벤 좌표좀 설정해줘
             // inven.transform.position = 
 
+            //act = GameObject.Find("PlayerAct");
             Debug.Log("Stage");
         }
     }
@@ -69,7 +71,7 @@ public class GameManager : MonoBehaviour
     {   
         if (sceneName == "Tutorial" && !onlyOne)
         {
-            inven.GetComponent<Inventory>().AddItem(2);
+            inven.GetComponent<Inventory>().AddItem(5);
             onlyOne = true;
         }
     }
