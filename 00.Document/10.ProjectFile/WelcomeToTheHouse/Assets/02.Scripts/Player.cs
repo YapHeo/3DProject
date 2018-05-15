@@ -45,7 +45,14 @@ public class Player : MonoBehaviour
     {
         Cameracenter = new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
         //0514 실험 끝나고 삭제
-        if (SceneManager.GetActiveScene().name == "Stage1" || SceneManager.GetActiveScene().name == "TempJH")
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            inven = Instantiate(inventory) as GameObject;
+            inven.transform.position = new Vector3(-1, 2, -1);
+
+            act = GameObject.Find("PlayerAct");
+        }
+        else if (SceneManager.GetActiveScene().name == "Stage")
         {
             inven = Instantiate(inventory) as GameObject;
             inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
