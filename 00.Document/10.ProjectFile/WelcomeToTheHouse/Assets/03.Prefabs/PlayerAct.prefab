@@ -52,3 +52,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paper: {fileID: 1553116073897378, guid: 3932a3d0f6947b24fbbf0bf18ed9b327, type: 2}
+  passwordTable: {fileID: 0}
+  magicSquare: {fileID: 0}
+  clockQuiz: {fileID: 0}

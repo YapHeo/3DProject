@@ -18,7 +18,7 @@ public class PlayerAct : MonoBehaviour
 
     bool[] isAction;
 
-    GameObject player;
+    GameObject gameManager;
 
     void Start()
     {
@@ -27,7 +27,7 @@ public class PlayerAct : MonoBehaviour
         for (int i = 0; i < isAction.Length; ++i)
             isAction[i] = false;
 
-        player = GameObject.Find("Player");
+        gameManager = GameObject.Find("GameManager");
     }
 
     void Update()
@@ -141,7 +141,7 @@ public class PlayerAct : MonoBehaviour
         {
             Debug.Log("GetFlashlight");
 
-            player.GetComponent<Player>().FlashlightOn();
+            gameManager.GetComponent<GameManager>().FlashlightOn();
 
             isAction[5] = false;
         }
