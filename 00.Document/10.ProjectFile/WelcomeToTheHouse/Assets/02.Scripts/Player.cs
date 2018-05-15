@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     GameObject inven;
     GameObject act;
     GameObject light;
+    GameObject talk;
 
     Vector3 Cameracenter;
     float gageAmount;
@@ -48,6 +49,7 @@ public class Player : MonoBehaviour
         Cameracenter = new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
 
         light = GameObject.Find("Light");
+        talk = GameObject.Find("Text");
 
         //0514 실험 끝나고 삭제
         if (SceneManager.GetActiveScene().name == "Tutorial")
@@ -59,10 +61,9 @@ public class Player : MonoBehaviour
 
             light.SetActive(false);
 
-            movespeed = 0;
             tempId = 5;
         }
-        else if (SceneManager.GetActiveScene().name == "Stage")
+        else if (SceneManager.GetActiveScene().name == "Stage" || SceneManager.GetActiveScene().name == "Jungyun")
         {
             inven = Instantiate(inventory) as GameObject;
             inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
@@ -75,7 +76,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if(!onlyOne)
+        if (!onlyOne && SceneManager.GetActiveScene().name != "Jungyun")
         {
             inven.GetComponent<Inventory>().AddItem(5);
             onlyOne = true;
@@ -182,7 +183,7 @@ public class Player : MonoBehaviour
                 {
                     if(SceneManager.GetActiveScene().name == "Tutorial")
                     {
-                        Debug.Log("랜턴을 사용하라는 대사 출력");
+                        talk.GetComponent<Text>().text = "너무 어두워서 랜턴을 사용해야 할 것 같아..";
                     }
                     else
                         inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
@@ -205,8 +206,10 @@ public class Player : MonoBehaviour
 
     public void FlashlightOn()
     {
+        talk.GetComponent<Text>().text = null;
+
         light.SetActive(true);
 
-        movespeed = 0.4f;
+        Destroy(GameObject.Find("TutorialCol"));
     }
 }
