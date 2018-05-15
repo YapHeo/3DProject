@@ -50,7 +50,11 @@ public class Player : MonoBehaviour
 
         if (sceneName == "Tutorial" || sceneName == "Stage")
         {
-            inven = GameObject.Find("Inventory(Clone)");
+            inven = GameObject.Find("Inventory");
+
+            if (inven == null)
+                Debug.Log("???????????");
+
             act = GameObject.Find("PlayerAct");
         }
     }

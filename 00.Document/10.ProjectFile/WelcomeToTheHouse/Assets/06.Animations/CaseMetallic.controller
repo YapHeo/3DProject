@@ -8,7 +8,7 @@ AnimatorController:
   m_Name: CaseMetallic
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Anim_Bool
+  - m_Name: CaseMetallicOpen
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -35,7 +35,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Anim_Bool
+    m_ConditionEvent: CaseMetallicOpen
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102782094852871964}
@@ -112,10 +112,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102782094852871964}
-    m_Position: {x: 252, y: 120, z: 0}
+    m_Position: {x: 216, y: 108, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102524311985157344}
-    m_Position: {x: 252, y: 12, z: 0}
+    m_Position: {x: 204, y: 24, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

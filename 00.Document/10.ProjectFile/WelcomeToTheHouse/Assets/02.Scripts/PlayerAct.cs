@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class PlayerAct : MonoBehaviour
 {
-    public GameObject paper;
-    GameObject paperTemp;
+    //public GameObject paper;
+    //GameObject paperTemp;
 
-    public GameObject passwordTable;
-    GameObject passwordTableTemp;
+    //public GameObject passwordTable;
+    //GameObject passwordTableTemp;
 
-    public GameObject magicSquare;
-    GameObject magicSquareTemp;
+    //public GameObject magicSquare;
+    //GameObject magicSquareTemp;
 
-    public GameObject clockQuiz;
-    GameObject clockQuizTemp;
+    //public GameObject clockQuiz;
+    //GameObject clockQuizTemp;
 
     bool[] isAction;
 
@@ -32,10 +32,10 @@ public class PlayerAct : MonoBehaviour
 
     void Update()
     {
-        StandOnPaper();
-        PhotoFrameOnPasswordTable();
-        StandOnMagicSquare();
-        SmallSafeOnClockQuiz();
+        //StandOnPaper();
+        //PhotoFrameOnPasswordTable();
+        //StandOnMagicSquare();
+        //SmallSafeOnClockQuiz();
         GetFlashlight();
     }
 
@@ -46,104 +46,104 @@ public class PlayerAct : MonoBehaviour
         isAction[_id] = true;
     }
 
-    void StandOnPaper()
-    {
-        if (isAction[1] == true)
-        {
-            Debug.Log("StandOnPaper");
+    //void StandOnPaper()
+    //{
+    //    if (isAction[1] == true)
+    //    {
+    //        Debug.Log("StandOnPaper");
 
-            paperTemp = Instantiate(paper) as GameObject;
+    //        paperTemp = Instantiate(paper) as GameObject;
 
-            paperTemp.transform.position = new Vector3(-0.783f, 1.151f, -2.515f);
-            paperTemp.transform.localScale = new Vector3(0.003576209f * 2, 0.007152418f, 0.002384139f * 2);
-            paperTemp.transform.rotation = Quaternion.Euler(0f, -90.0f, 0f);
+    //        paperTemp.transform.position = new Vector3(-0.783f, 1.151f, -2.515f);
+    //        paperTemp.transform.localScale = new Vector3(0.003576209f * 2, 0.007152418f, 0.002384139f * 2);
+    //        paperTemp.transform.rotation = Quaternion.Euler(0f, -90.0f, 0f);
 
-            GameObject stand = GameObject.Find("NightstandDetail01");
-            stand.tag = "Untagged";
-            stand.layer = 0;
+    //        GameObject stand = GameObject.Find("NightstandDetail01");
+    //        stand.tag = "Untagged";
+    //        stand.layer = 0;
 
-            isAction[1] = false;
-        }
-    }
+    //        isAction[1] = false;
+    //    }
+    //}
 
-    void PhotoFrameOnPasswordTable()
-    {
-        if (isAction[2] == true)
-        {
-            Debug.Log("PhotoFrameOnPasswordTable");
+    //void PhotoFrameOnPasswordTable()
+    //{
+    //    if (isAction[2] == true)
+    //    {
+    //        Debug.Log("PhotoFrameOnPasswordTable");
 
-            passwordTableTemp = Instantiate(passwordTable) as GameObject;
+    //        passwordTableTemp = Instantiate(passwordTable) as GameObject;
 
-            passwordTableTemp.transform.position = new Vector3(-0.915f, 2.631f, -2.806f);
-            passwordTableTemp.transform.localScale = new Vector3(10.0f, 6.0f, 1.5f);
-            passwordTableTemp.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+    //        passwordTableTemp.transform.position = new Vector3(-0.915f, 2.631f, -2.806f);
+    //        passwordTableTemp.transform.localScale = new Vector3(10.0f, 6.0f, 1.5f);
+    //        passwordTableTemp.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
 
-            passwordTableTemp.tag = "Untagged";
-            passwordTableTemp.layer = 0;
+    //        passwordTableTemp.tag = "Untagged";
+    //        passwordTableTemp.layer = 0;
 
-            GameObject photoFrame = GameObject.Find("Paint_01");
-            photoFrame.tag = "Untagged";
-            photoFrame.layer = 0;
+    //        GameObject photoFrame = GameObject.Find("Paint_01");
+    //        photoFrame.tag = "Untagged";
+    //        photoFrame.layer = 0;
 
-            isAction[2] = false;
-        }
-    }
+    //        isAction[2] = false;
+    //    }
+    //}
 
-    void StandOnMagicSquare()
-    {
-        if (isAction[3] == true)
-        {
-            Debug.Log("StandOnMagicSquare");
+    //void StandOnMagicSquare()
+    //{
+    //    if (isAction[3] == true)
+    //    {
+    //        Debug.Log("StandOnMagicSquare");
 
-            magicSquareTemp = Instantiate(magicSquare) as GameObject;
+    //        magicSquareTemp = Instantiate(magicSquare) as GameObject;
 
-            magicSquareTemp.transform.position = new Vector3(2.088736f, 1.433698f, -2.562197f);
-            magicSquareTemp.transform.localScale = new Vector3(0.03929003f, 0.03929402f, 0.0445646f);
-            magicSquareTemp.transform.rotation = Quaternion.Euler(-0.8200001f, 0f, 0f);
+    //        magicSquareTemp.transform.position = new Vector3(2.088736f, 1.433698f, -2.562197f);
+    //        magicSquareTemp.transform.localScale = new Vector3(0.03929003f, 0.03929402f, 0.0445646f);
+    //        magicSquareTemp.transform.rotation = Quaternion.Euler(-0.8200001f, 0f, 0f);
 
-            magicSquareTemp.tag = "Untagged";
-            magicSquareTemp.layer = 0;
+    //        magicSquareTemp.tag = "Untagged";
+    //        magicSquareTemp.layer = 0;
 
-            GameObject stand = GameObject.Find("Cabinet");
-            stand.tag = "Untagged";
-            stand.layer = 0;
+    //        GameObject stand = GameObject.Find("Cabinet");
+    //        stand.tag = "Untagged";
+    //        stand.layer = 0;
 
-            isAction[3] = false;
-        }
-    }
+    //        isAction[3] = false;
+    //    }
+    //}
 
-    void SmallSafeOnClockQuiz()
-    {
-        if (isAction[4] == true)
-        {
-            Debug.Log("SmallSafeOnClockQuiz");
+    //void SmallSafeOnClockQuiz()
+    //{
+    //    if (isAction[4] == true)
+    //    {
+    //        Debug.Log("SmallSafeOnClockQuiz");
 
-            clockQuizTemp = Instantiate(clockQuiz) as GameObject;
+    //        clockQuizTemp = Instantiate(clockQuiz) as GameObject;
 
-            clockQuizTemp.transform.position = new Vector3(1.003f, 1.105f, -1.055f);
-            clockQuizTemp.transform.localScale = new Vector3(0.04f, 0.04f, 0.04f);
-            clockQuizTemp.transform.rotation = Quaternion.Euler(0f, 3.346f, 0f);
+    //        clockQuizTemp.transform.position = new Vector3(1.003f, 1.105f, -1.055f);
+    //        clockQuizTemp.transform.localScale = new Vector3(0.04f, 0.04f, 0.04f);
+    //        clockQuizTemp.transform.rotation = Quaternion.Euler(0f, 3.346f, 0f);
 
-            clockQuizTemp.tag = "Untagged";
-            clockQuizTemp.layer = 0;
+    //        clockQuizTemp.tag = "Untagged";
+    //        clockQuizTemp.layer = 0;
 
-            GameObject smallSafe = GameObject.Find("Box03");
-            smallSafe.tag = "Untagged";
-            smallSafe.layer = 0;
+    //        GameObject smallSafe = GameObject.Find("Box03");
+    //        smallSafe.tag = "Untagged";
+    //        smallSafe.layer = 0;
 
-            isAction[4] = false;
-        }
-    }
+    //        isAction[4] = false;
+    //    }
+    //}
 
     void GetFlashlight()
     {
-        if (isAction[5] == true)
+        if (isAction[2] == true)
         {
             Debug.Log("GetFlashlight");
 
             gameManager.GetComponent<GameManager>().FlashlightOn();
 
-            isAction[5] = false;
+            isAction[2] = false;
         }
     }
 }
