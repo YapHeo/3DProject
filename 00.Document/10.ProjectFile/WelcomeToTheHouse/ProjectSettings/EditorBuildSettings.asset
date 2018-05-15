@@ -15,5 +15,8 @@ EditorBuildSettings:
     path: Assets/01.Scenes/Over.unity
     guid: bc699ed35b85ace449f9c33a78914792
   - enabled: 1
-    path: Assets/01.Scenes/Stage1.unity
-    guid: 5afbe073176b3a742af5ba536b9ccff2
+    path: Assets/01.Scenes/Tutorial.unity
+    guid: 103262534cfecd740acd84ae4f69aa22
+  - enabled: 1
+    path: Assets/01.Scenes/Stage.unity
+    guid: 0bd8146246b9a1d43baa9c2dd7faeccf
