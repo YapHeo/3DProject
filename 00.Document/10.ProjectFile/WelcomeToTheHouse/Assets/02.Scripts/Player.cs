@@ -14,11 +14,8 @@ public class Player : MonoBehaviour
     Image Cursor;
 
     // 인벤 정보
-    public GameObject inventory;
     GameObject inven;
     GameObject act;
-    GameObject light;
-    GameObject talk;
 
     Vector3 Cameracenter;
     float gageAmount;
@@ -40,7 +37,7 @@ public class Player : MonoBehaviour
     float movespeed = 0.4f;
 
     bool movingState = false;
-    bool onlyOne = false;
+    
 
     string sceneName;
 
@@ -48,40 +45,17 @@ public class Player : MonoBehaviour
     {
         Cameracenter = new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
 
-        light = GameObject.Find("Light");
-        talk = GameObject.Find("Text");
-
-        //0514 실험 끝나고 삭제
-        if (SceneManager.GetActiveScene().name == "Tutorial")
+        if (SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "Stage")
         {
-            inven = Instantiate(inventory) as GameObject;
-            inven.transform.position = new Vector3(1, 2, -1.2f);
-
-            act = GameObject.Find("PlayerAct");
-
-            light.SetActive(false);
-
-            tempId = 5;
-        }
-        else if (SceneManager.GetActiveScene().name == "Stage" || SceneManager.GetActiveScene().name == "Jungyun")
-        {
-            inven = Instantiate(inventory) as GameObject;
-            inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
-
+            inven = GameObject.Find("Inventory");
             act = GameObject.Find("PlayerAct");
         }
 
-        sceneName = Application.loadedLevelName;
+        sceneName = SceneManager.GetActiveScene().name;
     }
 
     void Update()
     {
-        if (!onlyOne && SceneManager.GetActiveScene().name == "Tutorial")
-        {
-            inven.GetComponent<Inventory>().AddItem(5);
-            onlyOne = true;
-        }
-
         if (sceneName == "Stage" || sceneName == "Tutorial")
         {
             rayLong = 2;
@@ -165,28 +139,20 @@ public class Player : MonoBehaviour
                 // 슬롯과 상호작용
                 if (hitcoll.collider.CompareTag("Slot"))
                 {             
-                    // 이거 개천재(tempId)
                     if (tempId == hitcoll.collider.GetComponent<Slot>().GetID())
                     {
                         Debug.Log("InteractionID == SpriteID : " + tempId + " == " + hitcoll.collider.GetComponent<Slot>().GetID());
 
                         hitcoll.collider.GetComponentInChildren<SpriteRenderer>().sprite = null;
-                        hitcoll.collider.GetComponent<Slot>().SetID(-1);
-
+                        hitcoll.collider.GetComponent<Slot>().SetID(-1);                       
                         inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
-
                         act.GetComponent<PlayerAct>().PlayerAction(tempId);
                     }
                 }
                 // 인벤 닫기
                 if (hitcoll.collider.CompareTag("InvenClose"))
                 {
-                    if(SceneManager.GetActiveScene().name == "Tutorial")
-                    {
-                        talk.GetComponent<Text>().text = "너무 어두워서 랜턴을 사용해야 할 것 같아..";
-                    }
-                    else
-                        inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
+                   inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
                 }
                 if (gageAmount > 1)
                 {
@@ -204,14 +170,13 @@ public class Player : MonoBehaviour
 
     }
 
-    public void FlashlightOn()
+    public void SettempId(int a)
     {
-        talk.GetComponent<Text>().text = null;
-
-        light.SetActive(true);
-
-        talk.GetComponent<Text>().text = "핏자국이 보인다 따라가보자..";
-
-        Destroy(GameObject.Find("TutorialCol"));
+        tempId = a;
     }
+
+
+
+
+
 }
