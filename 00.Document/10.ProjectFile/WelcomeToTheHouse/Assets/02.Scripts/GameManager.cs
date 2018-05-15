@@ -1,41 +1,38 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
-    bool sceneSW = false; 
-    int stageNum = 0;
-
     //private void Awake()
     //{    
     //    DontDestroyOnLoad(transform.gameObject);
     //}
 
+    string sceneName;
+    GameObject Lantern;
+    GameObject Talk;
+    GameObject Inventory;
+
     void Start()
     {
-
+        sceneName = Application.loadedLevelName;
     }
+
+    //1 인벤토리열고 랜턴 켜기
+    //2 피를 바라보면 이동하기
+    //3 문을 바라봐서 본게임 시작
 
     void Update()
     {
+        if (sceneName == "Tutorial")
+        {
 
-    }
-
-    public int GetStageNum()
-    {
-        return stageNum;
-    }
-    public void SetStageNum(int a)
-    {
-        stageNum = a;
+        }
+        
     }
 
-    public bool GetSceneSW()
-    {
-        return sceneSW;
-    }
-    public void SetSceneSW(bool ans)
-    {
-        sceneSW = ans;
-    }
+
+
 
 }

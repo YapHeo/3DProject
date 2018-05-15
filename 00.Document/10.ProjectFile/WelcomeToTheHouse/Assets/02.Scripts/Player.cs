@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     Vector3 targetPos = new Vector3(-1.0f, 2.0f, -1.0f);
     
     //이동속도
-    float movespeed = 0.3f;
+    float movespeed = 0.4f;
 
     bool movingState = false;
 
