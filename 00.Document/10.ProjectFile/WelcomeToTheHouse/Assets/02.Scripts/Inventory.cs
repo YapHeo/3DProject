@@ -22,27 +22,11 @@ public class Inventory : MonoBehaviour
         }
 
         itemSprite = itemDB.GetComponent<ItemDatabase>().GetItem();
-
-        // 이런식으로 할것이다 에헴.... 인벤 열닫할때 아이템 유지
-        if(arrSlot != null)
-        {
-            for(int i = 0; i < arrSlot.Length; ++i)
-            {
-
-            }
-        }
     }
 
     void Update()
     {
-        // 아이템 추가
-        //AddItem();
 
-        // 아이템 삭제
-        DelItem();
-
-        //if (Input.GetKeyDown(KeyCode.Alpha0))
-           // ResetItem();
     }
 
     public void AddItem(int _itemID)
@@ -61,38 +45,38 @@ public class Inventory : MonoBehaviour
 
     public void DelItem()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            arrSlot[0].GetComponentInChildren<SpriteRenderer>().sprite = null;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            arrSlot[1].GetComponentInChildren<SpriteRenderer>().sprite = null;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            arrSlot[2].GetComponentInChildren<SpriteRenderer>().sprite = null;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            arrSlot[3].GetComponentInChildren<SpriteRenderer>().sprite = null;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            arrSlot[4].GetComponentInChildren<SpriteRenderer>().sprite = null;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha6))
-        {
-            arrSlot[5].GetComponentInChildren<SpriteRenderer>().sprite = null;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha7))
-        {
-            arrSlot[6].GetComponentInChildren<SpriteRenderer>().sprite = null;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha8))
-        {
-            arrSlot[7].GetComponentInChildren<SpriteRenderer>().sprite = null;
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha1))
+        //{
+        //    arrSlot[0].GetComponentInChildren<SpriteRenderer>().sprite = null;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha2))
+        //{
+        //    arrSlot[1].GetComponentInChildren<SpriteRenderer>().sprite = null;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha3))
+        //{
+        //    arrSlot[2].GetComponentInChildren<SpriteRenderer>().sprite = null;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha4))
+        //{
+        //    arrSlot[3].GetComponentInChildren<SpriteRenderer>().sprite = null;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha5))
+        //{
+        //    arrSlot[4].GetComponentInChildren<SpriteRenderer>().sprite = null;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha6))
+        //{
+        //    arrSlot[5].GetComponentInChildren<SpriteRenderer>().sprite = null;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha7))
+        //{
+        //    arrSlot[6].GetComponentInChildren<SpriteRenderer>().sprite = null;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha8))
+        //{
+        //    arrSlot[7].GetComponentInChildren<SpriteRenderer>().sprite = null;
+        //}
     }
 
     public void ResetItem()

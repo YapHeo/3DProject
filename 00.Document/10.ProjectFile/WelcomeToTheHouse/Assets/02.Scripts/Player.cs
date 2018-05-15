@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public GameObject inventory;
     GameObject inven;
     GameObject act;
+    GameObject light;
 
     Vector3 Cameracenter;
     float gageAmount;
@@ -38,19 +39,28 @@ public class Player : MonoBehaviour
     float movespeed = 0.4f;
 
     bool movingState = false;
+    bool onlyOne = false;
 
     string sceneName;
 
     void Start()
     {
         Cameracenter = new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
+
+        light = GameObject.Find("Light");
+
         //0514 실험 끝나고 삭제
         if (SceneManager.GetActiveScene().name == "Tutorial")
         {
             inven = Instantiate(inventory) as GameObject;
-            inven.transform.position = new Vector3(-1, 2, -1);
+            inven.transform.position = new Vector3(1, 2, -1.2f);
 
             act = GameObject.Find("PlayerAct");
+
+            light.SetActive(false);
+
+            movespeed = 0;
+            tempId = 5;
         }
         else if (SceneManager.GetActiveScene().name == "Stage")
         {
@@ -61,18 +71,21 @@ public class Player : MonoBehaviour
         }
 
         sceneName = Application.loadedLevelName;
-
     }
 
     void Update()
     {
+        if(!onlyOne)
+        {
+            inven.GetComponent<Inventory>().AddItem(5);
+            onlyOne = true;
+        }
 
         if (sceneName == "Stage" || sceneName == "Tutorial")
         {
             rayLong = 2;
         }
- 
-
+        
         Cursorgage.fillAmount = gageAmount;
 
         ray = Camera.main.ScreenPointToRay(Cameracenter);
@@ -112,14 +125,12 @@ public class Player : MonoBehaviour
                 gageAmount = 0;
                 Cursor.gameObject.SetActive(false);
                 idleLook.gameObject.SetActive(true);
-                
             }
             else
             {
                 gageAmount += gageTime * Time.deltaTime;
                 Cursor.gameObject.SetActive(true);
                 idleLook.gameObject.SetActive(false);
-
             }
 
             if (gageAmount >= 1)
@@ -169,7 +180,12 @@ public class Player : MonoBehaviour
                 // 인벤 닫기
                 if (hitcoll.collider.CompareTag("InvenClose"))
                 {
-                    inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
+                    if(SceneManager.GetActiveScene().name == "Tutorial")
+                    {
+                        Debug.Log("랜턴을 사용하라는 대사 출력");
+                    }
+                    else
+                        inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
                 }
                 if (gageAmount > 1)
                 {
@@ -185,5 +201,12 @@ public class Player : MonoBehaviour
             idleLook.gameObject.SetActive(true);
         }
 
+    }
+
+    public void FlashlightOn()
+    {
+        light.SetActive(true);
+
+        movespeed = 0.4f;
     }
 }
