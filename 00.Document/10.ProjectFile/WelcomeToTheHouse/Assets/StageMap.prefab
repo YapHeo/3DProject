@@ -4562,9 +4562,9 @@ GameObject:
   - component: {fileID: 4198651753942934}
   - component: {fileID: 33995211264720088}
   - component: {fileID: 23080057306459820}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Case_Door_R
-  m_TagString: Nothing
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5091,9 +5091,9 @@ GameObject:
   - component: {fileID: 4769079866654276}
   - component: {fileID: 33214609075822558}
   - component: {fileID: 23550450899105368}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Case_Door_L
-  m_TagString: Nothing
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
