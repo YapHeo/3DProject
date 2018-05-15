@@ -11715,9 +11715,13 @@ MeshRenderer:
   m_SortingOrder: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!23 &23350925579743926
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+--- !u!23 &23386436975699378
+>>>>>>> parent of 14b5c4f... 간트차트 업로드
 =======
 --- !u!23 &23386436975699378
 >>>>>>> parent of 14b5c4f... 간트차트 업로드
@@ -11810,6 +11814,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
@@ -11920,6 +11925,8 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+=======
+>>>>>>> parent of 14b5c4f... 간트차트 업로드
 =======
 >>>>>>> parent of 14b5c4f... 간트차트 업로드
   m_PreserveUVs: 1
@@ -12446,6 +12453,9 @@ MeshRenderer:
   m_SortingOrder: 0
 --- !u!23 &23475530758752422
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 14b5c4f... 간트차트 업로드
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -14081,6 +14091,8 @@ MeshRenderer:
   m_SortingOrder: 0
 --- !u!23 &23820821540072000
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -14150,7 +14162,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
+--- !u!23 &23821410844724872
+>>>>>>> parent of 14b5c4f... 간트차트 업로드
+=======
 --- !u!23 &23841515523633858
+>>>>>>> parent of 14b5c4f... 간트차트 업로드
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
