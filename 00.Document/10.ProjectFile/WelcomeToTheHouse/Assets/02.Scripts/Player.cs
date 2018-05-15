@@ -210,6 +210,8 @@ public class Player : MonoBehaviour
 
         light.SetActive(true);
 
+        talk.GetComponent<Text>().text = "핏자국이 보인다 따라가보자..";
+
         Destroy(GameObject.Find("TutorialCol"));
     }
 }
