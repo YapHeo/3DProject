@@ -6,52 +6,60 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     string sceneName;
+
     GameObject Lantern;
     GameObject Talk;
 
     GameObject inven;
+
+    GameObject player;
+
     [SerializeField]
     GameObject Inventory;
-    [SerializeField]
-    GameObject Player;
+
+    //[SerializeField]
+    //GameObject Player;
 
     Text dialog;
 
     bool onlyOne = false;
 
-    private void Awake()
+    private void Start()
     {
         sceneName = SceneManager.GetActiveScene().name;
 
         Lantern = GameObject.Find("Light");
         Talk = GameObject.Find("Text");
+        player = GameObject.Find("Player");
 
         dialog = Talk.GetComponent<Text>();
 
-        if (SceneManager.GetActiveScene().name == "Tutorial")
+        if (sceneName == "Tutorial")
         {
             Lantern.SetActive(false);
 
             inven = Instantiate(Inventory) as GameObject;
             inven.transform.position = new Vector3(1, 2, -1.2f);
 
-            Player.GetComponent<Player>().SettempId(5);
+            player.GetComponent<Player>().SettempId(5);
 
             //act = GameObject.Find("PlayerAct");
+            Debug.Log("Tutorial");
         }
 
-        if (SceneManager.GetActiveScene().name == "Stage")
+        if (sceneName == "Stage")
         {
             inven = Instantiate(Inventory) as GameObject;
 
             Lantern.SetActive(true);
 
-            Player.GetComponent<Player>().SettempId(-1);
+            player.GetComponent<Player>().SettempId(-1);
 
             //인벤 좌표좀 설정해줘
             // inven.transform.position = 
 
             //act = GameObject.Find("PlayerAct");
+            Debug.Log("Stage");
         }
     }
 
@@ -64,16 +72,16 @@ public class GameManager : MonoBehaviour
         if (sceneName == "Tutorial" && !onlyOne)
         {
             inven.GetComponent<Inventory>().AddItem(5);
-            dialog.text = "너무 어두워서 랜턴을 사용해야 할 것 같아..";            
             onlyOne = true;
         }
-  
     }
 
+    public void NoInvenClose()
+    {
+        dialog.text = "너무 어두워서 랜턴을 사용해야 할 것 같아..";
+    }
     public void FlashlightOn()
     {
-        //Talk.GetComponent<Text>().text = null;
-
         Lantern.SetActive(true);
 
         dialog.text = "근처에 핏자국이 보인다 따라가보자..";

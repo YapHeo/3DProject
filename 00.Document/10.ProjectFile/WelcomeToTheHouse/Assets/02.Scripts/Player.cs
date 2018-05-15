@@ -16,13 +16,13 @@ public class Player : MonoBehaviour
     // 인벤 정보
     GameObject inven;
     GameObject act;
+    GameObject gameMgr;
 
     Vector3 Cameracenter;
     float gageAmount;
-    int tempId = -1;
+    int tempId;
 
-
-    Ray ray;    
+    Ray ray;
 
     //ray사거리
     [SerializeField]
@@ -32,35 +32,36 @@ public class Player : MonoBehaviour
 
     //이동목적지설정 초기값
     Vector3 targetPos = new Vector3(-1.0f, 2.0f, -1.0f);
-    
+
     //이동속도
     float movespeed = 0.4f;
 
     bool movingState = false;
-    
 
     string sceneName;
 
     void Start()
     {
+        sceneName = SceneManager.GetActiveScene().name;
+
+        gameMgr = GameObject.Find("GameManager");
+
         Cameracenter = new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
 
-        if (SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "Stage")
+        if (sceneName == "Tutorial" || sceneName == "Stage")
         {
-            inven = GameObject.Find("Inventory");
+            inven = GameObject.Find("Inventory(Clone)");
             act = GameObject.Find("PlayerAct");
         }
-
-        sceneName = SceneManager.GetActiveScene().name;
     }
 
     void Update()
     {
-        if (sceneName == "Stage" || sceneName == "Tutorial")
+        if (sceneName == "Tutorial" || sceneName == "Stage")
         {
             rayLong = 2;
         }
-        
+
         Cursorgage.fillAmount = gageAmount;
 
         ray = Camera.main.ScreenPointToRay(Cameracenter);
@@ -94,7 +95,7 @@ public class Player : MonoBehaviour
 
         //layermark를 사용------------ 
         if (Physics.Raycast(ray, out hitcoll, rayLong, 1 << 8))
-        {   
+        {
             if (hitcoll.collider.CompareTag("Nothing") || movecoll.collider.CompareTag("WayPoint") || movingState)
             {
                 gageAmount = 0;
@@ -138,13 +139,14 @@ public class Player : MonoBehaviour
                 }
                 // 슬롯과 상호작용
                 if (hitcoll.collider.CompareTag("Slot"))
-                {             
+                {
                     if (tempId == hitcoll.collider.GetComponent<Slot>().GetID())
                     {
                         Debug.Log("InteractionID == SpriteID : " + tempId + " == " + hitcoll.collider.GetComponent<Slot>().GetID());
 
                         hitcoll.collider.GetComponentInChildren<SpriteRenderer>().sprite = null;
-                        hitcoll.collider.GetComponent<Slot>().SetID(-1);                       
+                        hitcoll.collider.GetComponent<Slot>().SetID(-1);
+
                         inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
                         act.GetComponent<PlayerAct>().PlayerAction(tempId);
                     }
@@ -152,14 +154,16 @@ public class Player : MonoBehaviour
                 // 인벤 닫기
                 if (hitcoll.collider.CompareTag("InvenClose"))
                 {
-                   inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
+                    if (sceneName == "Tutorial")
+                        gameMgr.GetComponent<GameManager>().NoInvenClose();
+                    else
+                        inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
                 }
                 if (gageAmount > 1)
                 {
                     gageAmount = 0;
                 }
             }
-
         }
         else
         {
@@ -170,13 +174,8 @@ public class Player : MonoBehaviour
 
     }
 
-    public void SettempId(int a)
+    public void SettempId(int _tempId)
     {
-        tempId = a;
+        tempId = _tempId;
     }
-
-
-
-
-
 }
