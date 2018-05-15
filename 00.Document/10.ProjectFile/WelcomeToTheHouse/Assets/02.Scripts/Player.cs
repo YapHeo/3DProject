@@ -184,7 +184,6 @@ public class Player : MonoBehaviour
                     if(SceneManager.GetActiveScene().name == "Tutorial")
                     {
                         talk.GetComponent<Text>().text = "너무 어두워서 랜턴을 사용해야 할 것 같아..";
-                        Debug.Log("랜턴을 사용하라는 대사 출력");
                     }
                     else
                         inven.transform.position = new Vector3(Cameracenter.x, Cameracenter.y, -1);
@@ -207,6 +206,8 @@ public class Player : MonoBehaviour
 
     public void FlashlightOn()
     {
+        talk.GetComponent<Text>().text = null;
+
         light.SetActive(true);
 
         Destroy(GameObject.Find("TutorialCol"));
