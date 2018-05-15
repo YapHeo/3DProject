@@ -18,12 +18,16 @@ public class PlayerAct : MonoBehaviour
 
     bool[] isAction;
 
+    GameObject player;
+
     void Start()
     {
         isAction = new bool[10];
 
         for (int i = 0; i < isAction.Length; ++i)
             isAction[i] = false;
+
+        player = GameObject.Find("Player");
     }
 
     void Update()
@@ -32,6 +36,7 @@ public class PlayerAct : MonoBehaviour
         PhotoFrameOnPasswordTable();
         StandOnMagicSquare();
         SmallSafeOnClockQuiz();
+        GetFlashlight();
     }
 
     public void PlayerAction(int _id)
@@ -127,6 +132,18 @@ public class PlayerAct : MonoBehaviour
             smallSafe.layer = 0;
 
             isAction[4] = false;
+        }
+    }
+
+    void GetFlashlight()
+    {
+        if (isAction[5] == true)
+        {
+            Debug.Log("GetFlashlight");
+
+            player.GetComponent<Player>().FlashlightOn();
+
+            isAction[5] = false;
         }
     }
 }
