@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (!onlyOne && SceneManager.GetActiveScene().name != "Jungyun")
+        if (!onlyOne && SceneManager.GetActiveScene().name == "Tutorial")
         {
             inven.GetComponent<Inventory>().AddItem(5);
             onlyOne = true;
